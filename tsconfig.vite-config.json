@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "**/vite.config.*",
+    "**/vitest.config.*",
+    "**/vite.init.*",
+    "packages/build*/**/*"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node", "vitest"]
+  }
+}

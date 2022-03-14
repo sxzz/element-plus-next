@@ -1,0 +1,27 @@
+{
+  "cSpell.words": ["Element Plus", "element-plus"],
+  "editor.formatOnSave": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  "iconify.includes": ["ep"],
+  "npm.packageManager": "pnpm",
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.web.json",
+  "include": ["packages/**/src", "packages/**/tests", "packages/**/__tests__"],
+  "compilerOptions": {
+    "composite": true,
+    "lib": [],
+    "types": ["node", "jsdom", "vitest/globals"]
+  }
+}

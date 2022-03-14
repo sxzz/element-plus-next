@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "packageManager": "pnpm@6.32.3",
+  "description": "Element Plus Monorepo.",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
+  "scripts": {
+    "dev": "pnpm -C playground dev",
+    "dev:cli": "pnpm --filter @element-plus/build* run dev --parallel",
+    "build": "pnpm run build:cli && pnpm run build:app",
+    "build:cli": "pnpm --filter @element-plus/build* run build --parallel",
+    "build:app": "pnpm --filter @element-plus/theme-chalk --filter @element-plus/vue-components run build --parallel",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@element-plus/eslint-config": "workspace:*",
+    "@types/jsdom": "^16.2.14",
+    "@types/node": "*",
+    "c8": "^7.11.0",
+    "jiti": "^1.13.0",
+    "jsdom": "^19.0.0",
+    "vitest": "^0.6.1"
+  }
+}

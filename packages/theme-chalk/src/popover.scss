@@ -1,0 +1,45 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+@include b(popover) {
+  @include set-component-css-var('popover', $popover);
+
+  &.#{$namespace}-popper {
+    background: var(--el-popover-bg-color);
+    min-width: 150px;
+    border-radius: var(--el-popover-border-radius);
+    border: 1px solid var(--el-popover-border-color);
+    padding: var(--el-popover-padding);
+    z-index: var(--el-index-popper);
+    color: var(--el-text-color-regular);
+    line-height: 1.4;
+    text-align: justify;
+    font-size: var(--el-popover-font-size);
+    box-shadow: var(--el-box-shadow-light);
+    word-break: break-all;
+
+    @include m(plain) {
+      padding: var(--el-popover-padding-large);
+    }
+
+    @include e(title) {
+      color: var(--el-popover-title-text-color);
+      font-size: var(--el-popover-title-font-size);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    @include e(reference) {
+      &:focus:not(.focusing),
+      &:focus:hover {
+        outline-width: 0;
+      }
+    }
+
+    &:focus:active,
+    &:focus {
+      outline-width: 0;
+    }
+  }
+}

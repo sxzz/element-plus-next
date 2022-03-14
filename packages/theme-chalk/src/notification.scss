@@ -1,0 +1,101 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+@include b(notification) {
+  @include set-component-css-var('notification', $notification);
+}
+
+@include b(notification) {
+  display: flex;
+  width: var(--el-notification-width);
+  padding: var(--el-notification-padding);
+  border-radius: var(--el-notification-radius);
+  box-sizing: border-box;
+  border: 1px solid var(--el-notification-border-color);
+  position: fixed;
+  background-color: var(--el-color-white);
+  box-shadow: var(--el-notification-shadow);
+  transition: opacity var(--el-transition-duration),
+    transform var(--el-transition-duration), left var(--el-transition-duration),
+    right var(--el-transition-duration), top 0.4s,
+    bottom var(--el-transition-duration);
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  z-index: 9999;
+
+  &.right {
+    right: 16px;
+  }
+
+  &.left {
+    left: 16px;
+  }
+
+  @include e(group) {
+    margin-left: var(--el-notification-group-margin-left);
+    margin-right: var(--el-notification-group-margin-right);
+  }
+
+  @include e(title) {
+    font-weight: bold;
+    font-size: var(--el-notification-title-font-size);
+    line-height: var(--el-notification-icon-size);
+    color: var(--el-notification-title-color);
+    margin: 0;
+  }
+
+  @include e(content) {
+    font-size: var(--el-notification-content-font-size);
+    line-height: 24px;
+    margin: 6px 0 0 0;
+    color: var(--el-notification-content-color);
+    text-align: justify;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  & .#{$namespace}-notification__icon {
+    height: var(--el-notification-icon-size);
+    width: var(--el-notification-icon-size);
+    font-size: var(--el-notification-icon-size);
+  }
+
+  & .#{$namespace}-notification__closeBtn {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    cursor: pointer;
+    color: var(--el-notification-close-color);
+    font-size: var(--el-notification-close-font-size);
+
+    &:hover {
+      color: var(--el-notification-close-hover-color);
+    }
+  }
+
+  @each $type in (success, info, warning, error) {
+    & .#{$namespace}-notification--#{$type} {
+      --el-notification-icon-color: var(--el-color-#{$type});
+      color: var(--el-notification-icon-color);
+    }
+  }
+}
+
+.#{$namespace}-notification-fade-enter-from {
+  &.right {
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.#{$namespace}-notification-fade-leave-to {
+  opacity: 0;
+}

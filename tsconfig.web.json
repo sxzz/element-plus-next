@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["es2018", "dom"],
+    "jsx": "preserve"
+  },
+  "include": [
+    "packages/global.d.ts",
+    "packages/vue*/src",
+    "packages/element-plus/src",
+    "packages/*/package.json",
+    "playground/src"
+  ],
+  "exclude": ["packages/**/__tests__/*"]
+}

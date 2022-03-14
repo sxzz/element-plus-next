@@ -1,0 +1,159 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+$directions: rtl, ltr, ttb, btt;
+
+@include b(drawer) {
+  @include set-component-css-var('drawer', $drawer);
+}
+
+@include b(drawer) {
+  position: absolute;
+  box-sizing: border-box;
+  background-color: var(--el-drawer-bg-color);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2),
+    0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+
+  transition: all var(--el-transition-duration);
+
+  @each $direction in $directions {
+    .#{$direction} {
+      transform: translate(0, 0);
+    }
+  }
+
+  &__header {
+    align-items: center;
+    color: rgb(114, 118, 123);
+    display: flex;
+    margin-bottom: 32px;
+    padding: var(--el-drawer-padding-primary);
+    padding-bottom: 0;
+    & > :first-child {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    flex: 1;
+    line-height: inherit;
+    font-size: 1rem;
+  }
+
+  @include e(footer) {
+    padding: var(--el-drawer-padding-primary);
+    padding-top: 10px;
+    text-align: right;
+  }
+
+  &__close-btn {
+    border: none;
+    cursor: pointer;
+    font-size: var(--el-font-size-extra-large);
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+    &:hover {
+      i {
+        color: var(--el-color-primary);
+      }
+    }
+    .#{$namespace}-icon {
+      font-size: inherit;
+      vertical-align: text-bottom;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    padding: var(--el-drawer-padding-primary);
+    overflow: auto;
+    & > * {
+      box-sizing: border-box;
+    }
+  }
+
+  &.ltr,
+  &.rtl {
+    height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+
+  &.ttb,
+  &.btt {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  &.ltr {
+    left: 0;
+  }
+
+  &.rtl {
+    right: 0;
+  }
+
+  &.ttb {
+    top: 0;
+  }
+
+  &.btt {
+    bottom: 0;
+  }
+}
+
+.#{$namespace}-drawer-fade {
+  &-enter-active,
+  &-leave-active {
+    transition: all var(--el-transition-duration);
+  }
+
+  &-enter-from,
+  &-enter-active,
+  &-enter-to,
+  &-leave-from,
+  &-leave-active,
+  &-leave-to {
+    overflow: hidden !important;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-to,
+  &-leave-from {
+    opacity: 1;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    @each $direction in $directions {
+      .#{$direction} {
+        @if $direction == ltr {
+          transform: translateX(-100%);
+        }
+
+        @if $direction == rtl {
+          transform: translateX(100%);
+        }
+
+        @if $direction == ttb {
+          transform: translateY(-100%);
+        }
+
+        @if $direction == btt {
+          transform: translateY(100%);
+        }
+      }
+    }
+  }
+}

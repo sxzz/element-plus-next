@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+
+.idea
+.DS_Store
+.pnpm-debug.log*
+*.local

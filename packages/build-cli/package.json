@@ -1,0 +1,45 @@
+{
+  "name": "@element-plus/build-cli",
+  "version": "3.0.0-alpha.0",
+  "description": "Build CLI for Element Plus.",
+  "homepage": "https://element-plus.org/",
+  "keywords": [
+    "element-plus",
+    "element",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue",
+    "build",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/element-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/element-plus/element-plus/issues"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "bin": {
+    "ep-cli": "./bin/ep-cli.mjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "unbuild --stub",
+    "clean": "rimraf ./dist"
+  },
+  "dependencies": {
+    "@element-plus/build-utils": "3.0.0-alpha.0",
+    "c12": "^0.1.4",
+    "commander": "^9.0.0",
+    "tsup": "^5.12.1"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.17.0",
+    "rimraf": "^3.0.2",
+    "unbuild": "^0.7.0"
+  }
+}
