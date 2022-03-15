@@ -9,6 +9,7 @@
   "include": [
     "packages/vue*/src/**/*",
     "packages/utils/src/**/*",
+    "packages/constants/src/**/*",
     "packages/element-plus/src/**/*",
     "packages/*/package.json"
   ],

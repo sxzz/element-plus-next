@@ -11,7 +11,7 @@
     "dev:cli": "pnpm --filter @element-plus/build* run dev --parallel",
     "build": "pnpm run build:cli && pnpm run build:app",
     "build:cli": "pnpm --filter @element-plus/build* run build --parallel",
-    "build:app": "pnpm --filter @element-plus/theme-chalk --filter @element-plus/vue* --filter @element-plus/utils run build --parallel",
+    "build:app": "pnpm --filter @element-plus/theme-chalk --filter @element-plus/vue* --filter @element-plus/utils --filter @element-plus/constants run build --parallel",
     "test": "vitest",
     "typecheck": "pnpm vue-tsc --noEmit -p tsconfig.web.json --composite false && pnpm vue-tsc --noEmit -p tsconfig.playground.json --composite false && pnpm tsc --noEmit -p tsconfig.node.json && pnpm tsc --noEmit -p tsconfig.vite-config.json && pnpm vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },

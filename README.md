@@ -31,7 +31,7 @@ Element Plus 3. Exploring... 🧭
   - [x] `@element-plus/theme-chalk`
   - [x] `@element-plus/vue-components`
   - [x] `@element-plus/vue-utils`
-  - `@element-plus/constants`
+  - [x] `@element-plus/constants`
   - `@element-plus/vue-directives`
   - `@element-plus/vue-hooks`
 - Development

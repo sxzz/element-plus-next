@@ -66,6 +66,14 @@ importers:
       tsup: 5.12.1_typescript@4.6.2
       unbuild: 0.7.0
 
+  packages/constants:
+    specifiers:
+      '@element-plus/build-cli': 3.0.0-alpha.0
+      rimraf: ^3.0.2
+    devDependencies:
+      '@element-plus/build-cli': link:../build-cli
+      rimraf: 3.0.2
+
   packages/element-plus:
     specifiers:
       '@element-plus/build-cli': 3.0.0-alpha.0
