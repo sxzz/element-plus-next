@@ -34,6 +34,9 @@ Element Plus 3. Exploring... 🧭
   - [x] `@element-plus/constants`
   - `@element-plus/vue-directives`
   - `@element-plus/vue-hooks`
+- Icons
+  - `@element-plus/icons-svg`
+  - `@element-plus/icons-vue`
 - Development
   - [x] `@element-plus/build-cli`
   - [x] `@element-plus/build-utils`
