@@ -1,6 +1,13 @@
 # element-plus-next
 
-Element Plus 3. Exploring monorepo. 😉
+Element Plus 3. Exploring... 🧭
+
+## Features
+
+- 🔥 Real Monorepo - pnpm
+  - Separate each package
+- ⚡️ Super fast! - [ESBuild](https://esbuild.github.io/) / [tsup](https://github.com/egoist/tsup) / [unbuild](https://github.com/unjs/unbuild)
+- ⛔️ Stricter TypeScript type check
 
 ## Plan
 
@@ -15,7 +22,6 @@ Element Plus 3. Exploring monorepo. 😉
 - Style Importing
 - Typing
   - tsup dts
-  - [x] Checking
 
 ## Packages
 
