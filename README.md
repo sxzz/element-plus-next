@@ -16,6 +16,7 @@ Element Plus 3. Exploring monorepo. 😉
   - Fix tsup
 - [x] Vue SFC
 - Style Importing
+- Type Checking
 
 ## Packages
 
