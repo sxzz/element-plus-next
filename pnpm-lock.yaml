@@ -71,11 +71,13 @@ importers:
       '@element-plus/build-cli': 3.0.0-alpha.0
       '@element-plus/vue-components': 3.0.0-alpha.0
       rimraf: ^3.0.2
+      vue: ^3.2.31
     dependencies:
       '@element-plus/vue-components': link:../vue-components
     devDependencies:
       '@element-plus/build-cli': link:../build-cli
       rimraf: 3.0.2
+      vue: 3.2.31
 
   packages/eslint-config:
     specifiers:

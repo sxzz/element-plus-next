@@ -27,6 +27,7 @@ Element Plus 3. Exploring monorepo. 😉
   - `@element-plus/vue-utils`
   - `@element-plus/vue-hooks`
   - `@element-plus/theme-chalk`
+  - `@element-plus/constants`
 - Development
   - [x] `@element-plus/build-cli`
   - [x] `@element-plus/build-utils`

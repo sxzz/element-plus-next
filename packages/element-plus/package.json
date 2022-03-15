@@ -27,11 +27,15 @@
     "build": "ep-cli build",
     "clean": "rimraf ./dist"
   },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "dependencies": {
     "@element-plus/vue-components": "3.0.0-alpha.0"
   },
   "devDependencies": {
     "@element-plus/build-cli": "3.0.0-alpha.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "vue": "^3.2.31"
   }
 }
