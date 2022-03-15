@@ -52,6 +52,7 @@ module.exports = defineConfig({
           {
             pathPattern: '^$',
             order: [
+              'private',
               'name',
               'version',
               'description',
