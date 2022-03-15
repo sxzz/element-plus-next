@@ -26,18 +26,24 @@ importers:
       '@element-plus/build-utils': 3.0.0-alpha.0
       c12: ^0.1.4
       commander: ^9.0.0
+      esbuild: ^0.14.27
       rimraf: ^3.0.2
       tsup: ^5.12.1
       unbuild: ^0.7.0
+      unplugin-vue: ^1.0.1
+      vue: ^3.2.31
     dependencies:
       '@element-plus/build-utils': link:../build-utils
       c12: 0.1.4
       commander: 9.0.0
+      esbuild: 0.14.27
       tsup: 5.12.1
+      unplugin-vue: 1.0.1_esbuild@0.14.27+vue@3.2.31
     devDependencies:
       '@babel/types': 7.17.0
       rimraf: 3.0.2
       unbuild: 0.7.0
+      vue: 3.2.31
 
   packages/build-utils:
     specifiers:
@@ -142,9 +148,14 @@ importers:
 
   packages/vue-components:
     specifiers:
+      '@ctrl/tinycolor': ^3.4.0
       '@element-plus/build-cli': 3.0.0-alpha.0
+      '@element-plus/icons-vue': ^1.1.1
       rimraf: ^3.0.2
       vue: ^3.2.31
+    dependencies:
+      '@ctrl/tinycolor': 3.4.0
+      '@element-plus/icons-vue': 1.1.1_vue@3.2.31
     devDependencies:
       '@element-plus/build-cli': link:../build-cli
       rimraf: 3.0.2
@@ -180,6 +191,7 @@ packages:
   /@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==}
     engines: {node: '>=6.9.0'}
+    requiresBuild: true
     dependencies:
       '@babel/highlight': 7.16.10
 
@@ -294,6 +306,11 @@ packages:
       postcss: 8.4.8
       postcss-value-parser: 4.2.0
     dev: true
+
+  /@ctrl/tinycolor/3.4.0:
+    resolution: {integrity: sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==}
+    engines: {node: '>=10'}
+    dev: false
 
   /@element-plus/icons-vue/1.1.1_vue@3.2.31:
     resolution: {integrity: sha512-kRL/cWwaynmwi/6ounJxwnj316EHqAqKrl2WTCmcwiDPVqT+Wt1pSK6nAI0zUeLfe/y8NhYMB97+NDEWgNBCqA==}
@@ -674,7 +691,6 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
-    dev: true
 
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -1712,7 +1728,6 @@ packages:
     cpu: [x64]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-android-arm64/0.13.15:
@@ -1737,7 +1752,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-darwin-64/0.13.15:
@@ -1762,7 +1776,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-darwin-arm64/0.13.15:
@@ -1787,7 +1800,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-freebsd-64/0.13.15:
@@ -1812,7 +1824,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-freebsd-arm64/0.13.15:
@@ -1837,7 +1848,6 @@ packages:
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-32/0.13.15:
@@ -1862,7 +1872,6 @@ packages:
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-64/0.13.15:
@@ -1887,7 +1896,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-arm/0.13.15:
@@ -1912,7 +1920,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-arm64/0.13.15:
@@ -1937,7 +1944,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-mips64le/0.13.15:
@@ -1962,7 +1968,6 @@ packages:
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-ppc64le/0.13.15:
@@ -1987,7 +1992,6 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-riscv64/0.14.26:
@@ -2004,7 +2008,6 @@ packages:
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-linux-s390x/0.14.26:
@@ -2021,7 +2024,6 @@ packages:
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-netbsd-64/0.13.15:
@@ -2046,7 +2048,6 @@ packages:
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-node-loader/0.6.5:
@@ -2077,7 +2078,6 @@ packages:
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-register/3.3.2_esbuild@0.14.27:
@@ -2117,7 +2117,6 @@ packages:
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-windows-32/0.13.15:
@@ -2142,7 +2141,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-windows-64/0.13.15:
@@ -2167,7 +2165,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild-windows-arm64/0.13.15:
@@ -2192,7 +2189,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: true
     optional: true
 
   /esbuild/0.13.15:
@@ -2272,7 +2268,6 @@ packages:
       esbuild-windows-32: 0.14.27
       esbuild-windows-64: 0.14.27
       esbuild-windows-arm64: 0.14.27
-    dev: true
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -2865,6 +2860,10 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+
+  /hash-sum/2.0.0:
+    resolution: {integrity: sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==}
+    dev: false
 
   /hookable/5.1.1:
     resolution: {integrity: sha512-7qam9XBFb+DijNBthaL1k/7lHU2TEMZkWSyuqmU3sCQze1wFm5w9AlEx30PD7a+QVAjOy6Ec2goFwe1YVyk2uA==}
@@ -4231,6 +4230,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /querystring/0.2.1:
+    resolution: {integrity: sha512-wkvS7mL/JMugcup3/rMitHmd9ecIGd2lhFhK9N3UUQ450h66d1r3Y9nvXzQAW1Lq+wyx61k/1pfKS5KuKiyEbg==}
+    engines: {node: '>=0.4.x'}
+    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+    dev: false
+
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -4920,6 +4925,53 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
+  /unplugin-vue/1.0.1_esbuild@0.14.27+vue@3.2.31:
+    resolution: {integrity: sha512-SKEk+MHHpF4G38Zu3CtDmjKunXvugfPjgaDjZ/uVfsQx3unjwgmR8jd/+GG3QFmZvPR1dk3y/XxJ0NAvlkhKAg==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      vue: ^3.2.25
+    dependencies:
+      '@rollup/pluginutils': 4.2.0
+      debug: 4.3.3
+      hash-sum: 2.0.0
+      querystring: 0.2.1
+      source-map: 0.6.1
+      unplugin: 0.4.0_esbuild@0.14.27+vite@2.8.6
+      vite: 2.8.6
+      vue: 3.2.31
+    transitivePeerDependencies:
+      - esbuild
+      - less
+      - rollup
+      - sass
+      - stylus
+      - supports-color
+      - webpack
+    dev: false
+
+  /unplugin/0.4.0_esbuild@0.14.27+vite@2.8.6:
+    resolution: {integrity: sha512-4ScITEmzlz1iZW3tkz+3L1V5k/xMQ6kjgm4lEXKxH0ozd8/OUWfiSA7RMRyrawsvq/t50JIzPpp1UyuSL/AXkA==}
+    peerDependencies:
+      esbuild: '>=0.13'
+      rollup: ^2.50.0
+      vite: ^2.3.0
+      webpack: 4 || 5
+    peerDependenciesMeta:
+      esbuild:
+        optional: true
+      rollup:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      chokidar: 3.5.3
+      esbuild: 0.14.27
+      vite: 2.8.6
+      webpack-virtual-modules: 0.4.3
+    dev: false
+
   /untyped/0.4.2:
     resolution: {integrity: sha512-akHdcDop+tvtwPQxrbDfGf6zfQUgMjJXA8hXYYxcnmH6NnuMQatiY9wYDZ+jkUCcWuctb70f/QBYmbMsJpl48g==}
     dev: true
@@ -4975,7 +5027,6 @@ packages:
       rollup: 2.70.1
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /vite/2.8.6_sass@1.49.9:
     resolution: {integrity: sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==}
@@ -5080,6 +5131,10 @@ packages:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
     engines: {node: '>=12'}
     dev: true
+
+  /webpack-virtual-modules/0.4.3:
+    resolution: {integrity: sha512-5NUqC2JquIL2pBAAo/VfBP6KuGkHIZQXW/lNKupLPfhViwh8wNsu0BObtl09yuKZszeEUfbXz8xhrHvSG16Nqw==}
+    dev: false
 
   /whatwg-encoding/2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}

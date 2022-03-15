@@ -1,9 +1,10 @@
 import path from 'path'
 import { promises as fs } from 'fs'
 import { build as tsup } from 'tsup'
+import Vue from 'unplugin-vue/esbuild'
 import { getPackage } from '@element-plus/build-utils'
 import { getConfig } from './utils'
-
+import type { Plugin } from 'esbuild'
 import type { Options } from 'tsup'
 
 export async function build(packageName?: string) {
@@ -20,6 +21,8 @@ export async function build(packageName?: string) {
     entry: [path.resolve(pkg.dir, 'src/index.ts')],
   }
 
+  const plugins: Plugin[] = [Vue()]
+
   await fs.rm(outDir, { recursive: true, force: true })
 
   process.chdir(pkg.dir)
@@ -30,6 +33,8 @@ export async function build(packageName?: string) {
       esbuildOptions(options) {
         options.entryNames = `[dir]/${config.name}`
       },
+      loader: {},
+      esbuildPlugins: plugins,
     }),
     tsup({
       ...options,
@@ -38,6 +43,7 @@ export async function build(packageName?: string) {
       esbuildOptions(options) {
         options.entryNames = `[dir]/${config.name}.min`
       },
+      esbuildPlugins: plugins,
     }),
   ])
 }

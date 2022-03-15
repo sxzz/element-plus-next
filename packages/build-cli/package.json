@@ -35,11 +35,14 @@
     "@element-plus/build-utils": "3.0.0-alpha.0",
     "c12": "^0.1.4",
     "commander": "^9.0.0",
-    "tsup": "^5.12.1"
+    "esbuild": "^0.14.27",
+    "tsup": "^5.12.1",
+    "unplugin-vue": "^1.0.1"
   },
   "devDependencies": {
     "@babel/types": "^7.17.0",
     "rimraf": "^3.0.2",
-    "unbuild": "^0.7.0"
+    "unbuild": "^0.7.0",
+    "vue": "^3.2.31"
   }
 }

@@ -30,6 +30,10 @@
   "peerDependencies": {
     "vue": "^3.2.0"
   },
+  "dependencies": {
+    "@ctrl/tinycolor": "^3.4.0",
+    "@element-plus/icons-vue": "^1.1.1"
+  },
   "devDependencies": {
     "@element-plus/build-cli": "3.0.0-alpha.0",
     "rimraf": "^3.0.2",

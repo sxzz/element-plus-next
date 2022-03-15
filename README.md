@@ -14,7 +14,7 @@ Element Plus 3. Exploring monorepo. 😉
 
 - TypeScript DTS
   - Fix tsup
-- Vue SFC
+- [x] Vue SFC
 - Style Importing
 
 ## Packages
