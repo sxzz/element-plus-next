@@ -15,6 +15,7 @@
     "rootDir": ".",
     "types": [],
     "paths": {
+      "element-plus": ["packages/element-plus/src/index"],
       "@element-plus/*": ["packages/*/src"]
     }
   }

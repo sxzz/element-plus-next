@@ -1,13 +1,14 @@
 {
   "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node", "vitest"]
+  },
   "include": [
     "**/vite.config.*",
     "**/vitest.config.*",
     "**/vite.init.*",
     "packages/build*/**/*"
   ],
-  "compilerOptions": {
-    "composite": true,
-    "types": ["node", "vitest"]
-  }
+  "exclude": ["**/dist"]
 }

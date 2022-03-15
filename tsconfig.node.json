@@ -3,8 +3,9 @@
   "compilerOptions": {
     "composite": true,
     "lib": ["esnext"],
-    "types": ["node"]
+    "types": ["node"],
+    "skipLibCheck": true
   },
   "include": ["packages/build*/**/*", "packages/build*/**/*.json"],
-  "exclude": ["packages/**/__tests__", "packages/**/tests"]
+  "exclude": ["packages/**/__tests__/**", "packages/**/tests/**", "**/dist"]
 }

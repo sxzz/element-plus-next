@@ -15,9 +15,9 @@ export const getTsConfig = async (tsconfigPath: string) => {
   )
 
   if (parsedConfig.errors.length > 0) {
-    // eslint-disable-next-line unicorn/error-message
     throw new AggregateError(
-      parsedConfig.errors.map((error) => error.messageText)
+      parsedConfig.errors.map((error) => error.messageText),
+      'Promises rejected.'
     )
   }
 
