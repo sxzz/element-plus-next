@@ -3,10 +3,13 @@
   "compilerOptions": {
     "composite": true,
     "lib": ["es2018", "dom"],
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "skipLibCheck": true
   },
   "include": [
-    "packages/{vue*,element-plus,utils}/src/**/*",
+    "packages/vue*/src/**/*",
+    "packages/utils/src/**/*",
+    "packages/element-plus/src/**/*",
     "packages/*/package.json"
   ],
   "exclude": ["packages/**/__tests__/**"]

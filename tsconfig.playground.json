@@ -5,7 +5,9 @@
     "types": []
   },
   "include": [
-    "packages/{vue*,element-plus,utils}/src/**/*",
+    "packages/vue*/src/**/*",
+    "packages/utils/src/**/*",
+    "packages/element-plus/src/**/*",
     "packages/*/package.json",
     "playground/main.ts",
     "playground/env.d.ts",

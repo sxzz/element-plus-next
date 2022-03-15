@@ -15,7 +15,7 @@ Element Plus 3. Exploring monorepo. 😉
 - Style Importing
 - Typing
   - tsup dts
-  - Checking
+  - [x] Checking
 
 ## Packages
 
