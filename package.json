@@ -11,7 +11,7 @@
     "dev:cli": "pnpm --filter @element-plus/build* run dev --parallel",
     "build": "pnpm run build:cli && pnpm run build:app",
     "build:cli": "pnpm --filter @element-plus/build* run build --parallel",
-    "build:app": "pnpm --filter @element-plus/theme-chalk --filter @element-plus/vue-components run build --parallel",
+    "build:app": "pnpm --filter @element-plus/theme-chalk --filter @element-plus/vue* --filter @element-plus/utils run build --parallel",
     "test": "vitest"
   },
   "devDependencies": {

@@ -148,18 +148,66 @@ importers:
       rimraf: 3.0.2
       sass: 1.49.9
 
+  packages/utils:
+    specifiers:
+      '@element-plus/build-cli': 3.0.0-alpha.0
+      '@types/lodash-es': ^4.17.6
+      '@vue/shared': ^3.2.31
+      '@vueuse/core': ^8.0.1
+      lodash: ^4.17.21
+      lodash-es: ^4.17.21
+      lodash-unified: ^1.0.2
+      rimraf: ^3.0.2
+      type-fest: ^2.12.0
+    dependencies:
+      '@vue/shared': 3.2.31
+      '@vueuse/core': 8.0.1
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.2_da03a4540fbd16bbaafbb96724306afd
+    devDependencies:
+      '@element-plus/build-cli': link:../build-cli
+      '@types/lodash-es': 4.17.6
+      rimraf: 3.0.2
+      type-fest: 2.12.0
+
   packages/vue-components:
     specifiers:
       '@ctrl/tinycolor': ^3.4.0
       '@element-plus/build-cli': 3.0.0-alpha.0
       '@element-plus/icons-vue': ^1.1.1
+      '@element-plus/utils': 3.0.0-alpha.0
+      '@element-plus/vue-utils': 3.0.0-alpha.0
       rimraf: ^3.0.2
       vue: ^3.2.31
     dependencies:
       '@ctrl/tinycolor': 3.4.0
       '@element-plus/icons-vue': 1.1.1_vue@3.2.31
+      '@element-plus/utils': link:../utils
+      '@element-plus/vue-utils': link:../vue-utils
     devDependencies:
       '@element-plus/build-cli': link:../build-cli
+      rimraf: 3.0.2
+      vue: 3.2.31
+
+  packages/vue-utils:
+    specifiers:
+      '@element-plus/build-cli': 3.0.0-alpha.0
+      '@element-plus/utils': 3.0.0-alpha.0
+      '@types/lodash-es': ^4.17.6
+      lodash: ^4.17.21
+      lodash-es: ^4.17.21
+      lodash-unified: ^1.0.2
+      rimraf: ^3.0.2
+      vue: ^3.2.31
+    dependencies:
+      '@element-plus/utils': link:../utils
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      lodash-unified: 1.0.2_da03a4540fbd16bbaafbb96724306afd
+    devDependencies:
+      '@element-plus/build-cli': link:../build-cli
+      '@types/lodash-es': 4.17.6
       rimraf: 3.0.2
       vue: 3.2.31
 
@@ -744,6 +792,16 @@ packages:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: false
 
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
+    dependencies:
+      '@types/lodash': 4.14.180
+    dev: true
+
+  /@types/lodash/4.14.180:
+    resolution: {integrity: sha512-XOKXa1KIxtNXgASAnwj7cnttJxS4fksBRywK/9LzRV5YxrF80BXZIGeQSuoESQ/VkUj30Ae0+YcuHc15wJCB2g==}
+    dev: true
+
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
     dependencies:
@@ -985,6 +1043,40 @@ packages:
 
   /@vue/shared/3.2.31:
     resolution: {integrity: sha512-ymN2pj6zEjiKJZbrf98UM2pfDd6F2H7ksKw7NDt/ZZ1fh5Ei39X5tABugtT03ZRlWd9imccoK0hE8hpjpU7irQ==}
+
+  /@vueuse/core/8.0.1:
+    resolution: {integrity: sha512-LQ5pyxALWMZikNWzW2CTs/RfTyT0O3oYDl7jJhfckY0q/dLe2SCy5vX4+f6c2LFjG9M+sXRugne+W4t1I/wXUA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      '@vueuse/metadata': 8.0.1
+      '@vueuse/shared': 8.0.1
+      vue-demi: 0.12.3
+    dev: false
+
+  /@vueuse/metadata/8.0.1:
+    resolution: {integrity: sha512-+Y2TSsgliQMzqcRMcuX28XHrxojrZYGiBKzW05/mkPmlYGlUSOauF9pvyyslH0V4HfzCsg3CDKJhCnBLWKqN0w==}
+    dev: false
+
+  /@vueuse/shared/8.0.1:
+    resolution: {integrity: sha512-PZf84+DHWUnIKNhvIxL335uWjjfIeEhYjRFilDqEWB/t4yHfNbZxDpT+4OgiLtgdCcGG1JKryNI7nkY9TyEu6w==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      vue-demi: 0.12.3
+    dev: false
 
   /@zkochan/npm-conf/2.0.2:
     resolution: {integrity: sha512-nF6cxXu/3x0gbIGZdiajpL6diySPoU5T5Mh0TXSjHp2shZoqtZgRj3zdIc/pkd6kKAWaktFvOFFo5kTqwne/tg==}
@@ -3343,6 +3435,22 @@ packages:
     dependencies:
       p-locate: 5.0.0
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
+  /lodash-unified/1.0.2_da03a4540fbd16bbaafbb96724306afd:
+    resolution: {integrity: sha512-OGbEy+1P+UT26CYi4opY4gebD8cWRDxAT6MAObIVQMiqYdxZr1g3QHWCToVsm31x2NkLS4K3+MC2qInaRMa39g==}
+    peerDependencies:
+      '@types/lodash-es': '*'
+      lodash: '*'
+      lodash-es: '*'
+    dependencies:
+      '@types/lodash-es': 4.17.6
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+    dev: false
+
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
@@ -4849,6 +4957,11 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /type-fest/2.12.0:
+    resolution: {integrity: sha512-Qe5GRT+n/4GoqCNGGVp5Snapg1Omq3V7irBJB3EaKsp7HWDo5Gv2d/67gfNyV+d5EXD+x/RF5l1h4yJ7qNkcGA==}
+    engines: {node: '>=12.20'}
+    dev: true
+
   /typedarray-to-buffer/3.1.5:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
     dependencies:
@@ -5088,6 +5201,19 @@ packages:
       - sass
       - stylus
     dev: true
+
+  /vue-demi/0.12.3:
+    resolution: {integrity: sha512-u1dV2Y7nxUCHJC0+KZG7YgqjOgDgd8GS0rHp2YTiXy6rBPaYvEraoXkndU3UrExMLoN8SOnCWkDB27yu0BxGtg==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dev: false
 
   /vue-eslint-parser/8.3.0_eslint@8.11.0:
     resolution: {integrity: sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g==}

@@ -12,22 +12,22 @@ Element Plus 3. Exploring monorepo. 😉
 
 ## Unresolved
 
-- TypeScript DTS
-  - Fix tsup
-- [x] Vue SFC
 - Style Importing
-- Type Checking
+- Typing
+  - tsup dts
+  - Checking
 
 ## Packages
 
 - Core
   - [x] `element-plus`
+  - [x] `@element-plus/utils`
+  - [x] `@element-plus/theme-chalk`
   - [x] `@element-plus/vue-components`
-  - `@element-plus/vue-directives`
-  - `@element-plus/vue-utils`
-  - `@element-plus/vue-hooks`
-  - `@element-plus/theme-chalk`
+  - [x] `@element-plus/vue-utils`
   - `@element-plus/constants`
+  - `@element-plus/vue-directives`
+  - `@element-plus/vue-hooks`
 - Development
   - [x] `@element-plus/build-cli`
   - [x] `@element-plus/build-utils`

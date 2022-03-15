@@ -6,7 +6,7 @@
     "jsx": "preserve"
   },
   "include": [
-    "packages/{vue*,element-plus}/src/**/*",
+    "packages/{vue*,element-plus,utils}/src/**/*",
     "packages/*/package.json"
   ],
   "exclude": ["packages/**/__tests__/**"]

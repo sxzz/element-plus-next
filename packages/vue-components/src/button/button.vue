@@ -1,5 +1,7 @@
 <script setup lang="ts">
-console.log('Button Component')
+import { buttonProps } from './button'
+
+defineProps(buttonProps)
 </script>
 
 <template>

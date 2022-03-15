@@ -1,7 +1,7 @@
 {
-  "name": "@element-plus/vue-components",
+  "name": "@element-plus/utils",
   "version": "3.0.0-alpha.0",
-  "description": "Vue component for Element Plus.",
+  "description": "Utils for Element Plus.",
   "homepage": "https://element-plus.org/",
   "keywords": [
     "element-plus",
@@ -9,8 +9,7 @@
     "component library",
     "ui framework",
     "ui",
-    "vue",
-    "components"
+    "utils"
   ],
   "license": "MIT",
   "repository": {
@@ -27,18 +26,17 @@
     "build": "ep-cli build",
     "clean": "rimraf ./dist"
   },
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
   "dependencies": {
-    "@ctrl/tinycolor": "^3.4.0",
-    "@element-plus/icons-vue": "^1.1.1",
-    "@element-plus/utils": "3.0.0-alpha.0",
-    "@element-plus/vue-utils": "3.0.0-alpha.0"
+    "@vue/shared": "^3.2.31",
+    "@vueuse/core": "^8.0.1",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.2"
   },
   "devDependencies": {
     "@element-plus/build-cli": "3.0.0-alpha.0",
+    "@types/lodash-es": "^4.17.6",
     "rimraf": "^3.0.2",
-    "vue": "^3.2.31"
+    "type-fest": "^2.12.0"
   }
 }
