@@ -1,6 +1,7 @@
 import { warn } from 'vue'
 import { fromPairs } from 'lodash-unified'
 import { isObject, hasOwn } from '@element-plus/utils'
+
 import type { ExtractPropTypes, PropType } from 'vue'
 
 const wrapperKey = Symbol()
@@ -32,6 +33,7 @@ export type BuildPropOption<T, D extends BuildPropType<T, V, C>, R, V, C> = {
     ? () => D
     : (() => D) | D
   validator?: ((val: any) => val is C) | ((val: any) => boolean)
+
   [propKey]?: boolean
 }
 

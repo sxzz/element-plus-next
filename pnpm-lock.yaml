@@ -203,15 +203,19 @@ importers:
   packages/vue-utils:
     specifiers:
       '@element-plus/build-cli': 3.0.0-alpha.0
+      '@element-plus/icons-vue': ^1.1.1
       '@element-plus/utils': 3.0.0-alpha.0
       '@types/lodash-es': ^4.17.6
+      '@vue/shared': ^3.2.31
       lodash: ^4.17.21
       lodash-es: ^4.17.21
       lodash-unified: ^1.0.2
       rimraf: ^3.0.2
       vue: ^3.2.31
     dependencies:
+      '@element-plus/icons-vue': 1.1.1_vue@3.2.31
       '@element-plus/utils': link:../utils
+      '@vue/shared': 3.2.31
       lodash: 4.17.21
       lodash-es: 4.17.21
       lodash-unified: 1.0.2_da03a4540fbd16bbaafbb96724306afd
