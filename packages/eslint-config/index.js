@@ -27,7 +27,7 @@ module.exports = defineConfig({
   },
   overrides: [
     {
-      files: ['*.json', '*.json5', '*.jsonc'],
+      files: ['*.json', '*.json5', '*.jsonc', '*rc'],
       parser: 'jsonc-eslint-parser',
     },
     {

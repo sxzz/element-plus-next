@@ -9,6 +9,7 @@
     "packages/utils/src/**/*",
     "packages/constants/src/**/*",
     "packages/element-plus/src/**/*",
+    "packages/web-env.d.ts",
     "packages/*/package.json",
     "playground/main.ts",
     "playground/env.d.ts",
