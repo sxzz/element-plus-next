@@ -16,7 +16,7 @@
     "types": [],
     "paths": {
       "element-plus": ["packages/element-plus/src/index"],
-      "@element-plus/*": ["packages/*/src"]
+      "@element-plus-dev/*": ["packages/*/src"]
     }
   }
 }

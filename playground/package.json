@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@element-plus/playground",
+  "name": "@element-plus-dev/playground",
   "version": "3.0.0-alpha.0",
   "description": "Build utils for Element Plus.",
   "homepage": "https://element-plus.org/",
@@ -29,12 +29,12 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^1.1.1",
-    "@element-plus/theme-chalk": "^2.1.2",
+    "@element-plus-dev/theme-chalk": "workspace:*",
     "element-plus": "workspace:*",
     "vue": "^3.2.31"
   },
   "devDependencies": {
-    "@element-plus/build-utils": "workspace:*",
+    "@element-plus-dev/build-utils": "workspace:*",
     "@vitejs/plugin-vue": "^2.2.4",
     "escape-string-regexp": "^4.0.0",
     "sass": "^1.49.9",

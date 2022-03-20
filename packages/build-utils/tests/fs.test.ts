@@ -11,6 +11,6 @@ describe('fs', () => {
   it('readJSON should work', async () => {
     const data = await readJSON<any>(pkgPath)
     expect(data).a('object')
-    expect(data.name).toBe('@element-plus/build-utils')
+    expect(data.name).toBe('@element-plus-dev/build-utils')
   })
 })

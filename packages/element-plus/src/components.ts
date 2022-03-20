@@ -1,4 +1,4 @@
-import { ElButton } from '@element-plus/vue-components'
+import { ElButton } from '@element-plus-dev/vue-components'
 
 import type { Plugin } from 'vue'
 

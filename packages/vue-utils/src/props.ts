@@ -1,6 +1,6 @@
 import { warn } from 'vue'
 import { fromPairs } from 'lodash-unified'
-import { isObject, hasOwn } from '@element-plus/utils'
+import { isObject, hasOwn } from '@element-plus-dev/utils'
 
 import type { ExtractPropTypes, PropType } from 'vue'
 

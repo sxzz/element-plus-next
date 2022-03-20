@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/build-cli",
+  "name": "@element-plus-dev/build-cli",
   "version": "3.0.0-alpha.0",
   "description": "Build CLI for Element Plus.",
   "homepage": "https://element-plus.org/",
@@ -32,7 +32,7 @@
     "clean": "rimraf ./dist"
   },
   "dependencies": {
-    "@element-plus/build-utils": "3.0.0-alpha.0",
+    "@element-plus-dev/build-utils": "3.0.0-alpha.0",
     "c12": "^0.1.4",
     "commander": "^9.0.0",
     "esbuild": "^0.14.27",

@@ -1,5 +1,5 @@
 import { program } from 'commander'
-import { errorAndExit } from '@element-plus/build-utils'
+import { errorAndExit } from '@element-plus-dev/build-utils'
 import { version } from '../package.json'
 import { build } from './build'
 import { dts } from './dts'

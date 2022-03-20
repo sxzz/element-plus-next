@@ -19,7 +19,7 @@ describe('workspace', () => {
 
   it('getDependencies should work', async () => {
     const pkgs = await getWorkspacePackages()
-    const pkg = pkgs['@element-plus/build-utils']
+    const pkg = pkgs['@element-plus-dev/build-utils']
     const deps = getDependencies(pkg)
     expect(deps).contain('@pnpm/find-workspace-packages')
     expect(deps).not.contain('tsup')

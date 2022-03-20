@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/vue-components",
+  "name": "@element-plus-dev/vue-components",
   "version": "3.0.0-alpha.0",
   "description": "Vue component for Element Plus.",
   "homepage": "https://element-plus.org/",
@@ -33,11 +33,11 @@
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
     "@element-plus/icons-vue": "^1.1.1",
-    "@element-plus/utils": "3.0.0-alpha.0",
-    "@element-plus/vue-utils": "3.0.0-alpha.0"
+    "@element-plus-dev/utils": "3.0.0-alpha.0",
+    "@element-plus-dev/vue-utils": "3.0.0-alpha.0"
   },
   "devDependencies": {
-    "@element-plus/build-cli": "3.0.0-alpha.0",
+    "@element-plus-dev/build-cli": "3.0.0-alpha.0",
     "rimraf": "^3.0.2",
     "vue": "^3.2.31"
   }

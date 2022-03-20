@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/constants",
+  "name": "@element-plus-dev/constants",
   "version": "3.0.0-alpha.0",
   "description": "Constants for Element Plus.",
   "homepage": "https://element-plus.org/",
@@ -28,7 +28,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@element-plus/build-cli": "3.0.0-alpha.0",
+    "@element-plus-dev/build-cli": "3.0.0-alpha.0",
     "rimraf": "^3.0.2"
   }
 }

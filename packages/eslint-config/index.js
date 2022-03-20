@@ -224,7 +224,7 @@ module.exports = defineConfig({
             position: 'before',
           },
           {
-            pattern: '@element-plus/**',
+            pattern: '@element-plus-dev/**',
             group: 'internal',
           },
         ],

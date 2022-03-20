@@ -1,7 +1,7 @@
 import { loadConfig } from 'c12'
 
 import type { BuildOptions } from '../types'
-import type { Project } from '@element-plus/build-utils'
+import type { Project } from '@element-plus-dev/build-utils'
 
 export type BuildOptionsResolved = Required<BuildOptions>
 

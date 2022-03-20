@@ -27,21 +27,22 @@ Element Plus 3. Exploring... 🧭
 
 - Core
   - [x] `element-plus`
-  - [x] `@element-plus/utils`
-  - [x] `@element-plus/theme-chalk`
-  - [x] `@element-plus/vue-components`
-  - [x] `@element-plus/vue-utils`
-  - [x] `@element-plus/constants`
-  - `@element-plus/vue-directives`
-  - `@element-plus/vue-hooks`
+  - [x] `@element-plus-dev/constants`
+  - [x] `@element-plus-dev/utils`
+  - [x] `@element-plus-dev/theme-chalk`
+  - [x] `@element-plus-dev/vue-components`
+  - [x] `@element-plus-dev/vue-utils`
+  - [ ] `@element-plus-dev/locale`
+  - [ ] `@element-plus-dev/vue-directives`
+  - [ ] `@element-plus-dev/vue-hooks`
 - Development
-  - [x] `@element-plus/build-cli`
-  - [x] `@element-plus/build-utils`
-  - [x] `@element-plus/playground`
+  - [x] `@element-plus-dev/build-cli`
+  - [x] `@element-plus-dev/build-utils`
+  - [x] `@element-plus-dev/playground`
 - DX
-  - [x] `@element-plus/eslint-config`
+  - [x] `@element-plus-dev/eslint-config`
 - Documentation
-  - `@element-plus/docs`
+  - [x] `@element-plus-dev/docs`
 
 ## Reference
 
