@@ -31,16 +31,16 @@
   "devDependencies": {
     "@element-plus-dev/build-utils": "3.0.0-alpha.0",
     "@types/clean-css": "^4.2.5",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.4",
     "chalk": "^5.0.1",
     "clean-css": "^5.2.4",
     "consola": "^2.15.3",
     "esbuild": "^0.14.27",
-    "esbuild-sass-plugin": "^2.2.4",
+    "esbuild-sass-plugin": "^2.2.5",
     "esno": "^0.14.1",
     "fast-glob": "^3.2.11",
-    "postcss": "^8.4.8",
-    "postcss-preset-env": "^7.4.2",
+    "postcss": "^8.4.12",
+    "postcss-preset-env": "^7.4.3",
     "rimraf": "^3.0.2",
     "sass": "^1.49.9"
   }
