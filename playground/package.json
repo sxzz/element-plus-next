@@ -28,7 +28,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^1.1.1",
+    "@element-plus/icons-vue": "^1.1.4",
     "@element-plus-dev/theme-chalk": "workspace:*",
     "element-plus": "workspace:*",
     "vue": "^3.2.31"
