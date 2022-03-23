@@ -29,7 +29,7 @@
     "clean": "rimraf ./dist"
   },
   "dependencies": {
-    "@pnpm/find-workspace-dir": "^3.0.2",
+    "@pnpm/find-workspace-dir": "^4.0.0",
     "@pnpm/find-workspace-packages": "^4.0.0",
     "@pnpm/logger": "^4.0.0",
     "consola": "^2.15.3",

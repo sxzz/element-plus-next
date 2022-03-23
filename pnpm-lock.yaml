@@ -47,7 +47,7 @@ importers:
 
   packages/build-utils:
     specifiers:
-      '@pnpm/find-workspace-dir': ^3.0.2
+      '@pnpm/find-workspace-dir': ^4.0.0
       '@pnpm/find-workspace-packages': ^4.0.0
       '@pnpm/logger': ^4.0.0
       consola: ^2.15.3
@@ -56,7 +56,7 @@ importers:
       typescript: ^4.6.2
       unbuild: ^0.7.0
     dependencies:
-      '@pnpm/find-workspace-dir': 3.0.2
+      '@pnpm/find-workspace-dir': 4.0.0
       '@pnpm/find-workspace-packages': 4.0.0_@pnpm+logger@4.0.0
       '@pnpm/logger': 4.0.0
       consola: 2.15.3
@@ -488,11 +488,6 @@ packages:
       - '@pnpm/logger'
     dev: false
 
-  /@pnpm/constants/5.0.0:
-    resolution: {integrity: sha512-VhUGKR5jvAtoBHgHAB3Kfc9g42ocVUws9iOafGAQ+xjR8uLokUCReXDpLXRRtrqw8N8yyh3gLNpCJs/AYadA1g==}
-    engines: {node: '>=12.17'}
-    dev: false
-
   /@pnpm/constants/6.0.0:
     resolution: {integrity: sha512-r/DDueDU2rskc8yhMYLCqgY0ttaWRxJEvg+bLvUYINCTzJmirsVtPcEgRnNORKYO0trbF+BWB69N435HhHPBcA==}
     engines: {node: '>=14.19'}
@@ -535,13 +530,6 @@ packages:
       strip-ansi: 6.0.1
     dev: false
 
-  /@pnpm/error/2.1.0:
-    resolution: {integrity: sha512-IxtPG61WgxsDNbtWW+128RiRo6WHhm7Dm2vm77xxC/zEi/uQ35Uf59olhVT3m2/ETDw/iz7Lv1RpvPYTsglX9g==}
-    engines: {node: '>=12.17'}
-    dependencies:
-      '@pnpm/constants': 5.0.0
-    dev: false
-
   /@pnpm/error/3.0.0:
     resolution: {integrity: sha512-47anCwsVA6Wrbh1niHpNYctA5w4UG0kFBiO+PaQzpYfxoC1Fo+UuTyyUukfjA1/GJBkO7z+dWiJ+HMMR8A+jJg==}
     engines: {node: '>=14.19'}
@@ -549,11 +537,11 @@ packages:
       '@pnpm/constants': 6.0.0
     dev: false
 
-  /@pnpm/find-workspace-dir/3.0.2:
-    resolution: {integrity: sha512-40Psxd3Fb7V/kmqOaj2rPv07ycvm81avFwHeKHEXJU0JxVUv49iQjvMb6itm6NEbjyllmjmbU/6bl2tKr5A25Q==}
-    engines: {node: '>=12.17'}
+  /@pnpm/find-workspace-dir/4.0.0:
+    resolution: {integrity: sha512-zizHJwiDGOkHWyMzs5J+kaCTPXwj8cLub33FOsf0QLJBL3wpUXYh7cRaBycCEkaG2rZxNMRz0EpEQjDjgHOQPQ==}
+    engines: {node: '>=14.19'}
     dependencies:
-      '@pnpm/error': 2.1.0
+      '@pnpm/error': 3.0.0
       find-up: 5.0.0
     dev: false
 
