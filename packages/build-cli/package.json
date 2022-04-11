@@ -37,7 +37,7 @@
     "commander": "^9.1.0",
     "esbuild": "^0.14.27",
     "tsup": "^5.12.1",
-    "unplugin-vue": "^1.0.1"
+    "unplugin-vue": "^2.0.0"
   },
   "devDependencies": {
     "@babel/types": "^7.17.0",
