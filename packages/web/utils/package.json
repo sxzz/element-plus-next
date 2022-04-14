@@ -1,0 +1,43 @@
+{
+  "name": "@element-plus-dev/utils",
+  "version": "3.0.0-alpha.0",
+  "description": "Utils for Element Plus.",
+  "homepage": "https://element-plus.org/",
+  "keywords": [
+    "element-plus",
+    "element",
+    "component library",
+    "ui framework",
+    "ui",
+    "utils"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/element-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/element-plus/element-plus/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "ep-cli build",
+    "clean": "rimraf ./dist"
+  },
+  "dependencies": {
+    "@vue/shared": "^3.2.31",
+    "@vueuse/core": "^8.2.5",
+    "escape-string-regexp": "^5.0.0",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.2"
+  },
+  "devDependencies": {
+    "@element-plus-dev/build-cli": "3.0.0-alpha.0",
+    "@types/lodash-es": "^4.17.6",
+    "rimraf": "^3.0.2",
+    "type-fest": "^2.12.2"
+  }
+}

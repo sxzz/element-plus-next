@@ -6,6 +6,6 @@
     "types": ["node"],
     "skipLibCheck": true
   },
-  "include": ["packages/build*/**/*", "packages/build*/**/*.json"],
-  "exclude": ["packages/**/__tests__/**", "packages/**/tests/**", "**/dist"]
+  "include": ["packages/node/**/*", "packages/node/**/*.json"],
+  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"]
 }

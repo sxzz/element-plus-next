@@ -8,10 +8,10 @@
   },
   "scripts": {
     "dev": "pnpm -C playground dev",
-    "dev:cli": "pnpm --filter @element-plus-dev/build* run dev --parallel",
-    "build": "pnpm run build:cli && pnpm run build:app",
-    "build:cli": "pnpm --filter @element-plus-dev/build* run build --parallel",
-    "build:app": "pnpm --filter @element-plus-dev/theme-chalk --filter @element-plus-dev/vue* --filter @element-plus-dev/utils --filter @element-plus-dev/constants run build --parallel",
+    "dev:node": "pnpm --filter ./packages/node run dev --parallel",
+    "build": "pnpm run build:node && pnpm run build:web",
+    "build:node": "pnpm --filter ./packages/node run build --parallel",
+    "build:web": "pnpm --filter ./packages/web run build --parallel",
     "test": "vitest",
     "typecheck": "pnpm vue-tsc --noEmit -p tsconfig.web.json --composite false && pnpm vue-tsc --noEmit -p tsconfig.playground.json --composite false && pnpm tsc --noEmit -p tsconfig.node.json && pnpm tsc --noEmit -p tsconfig.vite-config.json && pnpm vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
@@ -19,9 +19,10 @@
     "@element-plus-dev/eslint-config": "workspace:*",
     "@types/jsdom": "^16.2.14",
     "@types/node": "*",
+    "@vitest/ui": "^0.9.3",
     "c8": "^7.11.0",
     "jiti": "^1.13.0",
     "jsdom": "^19.0.0",
-    "vitest": "^0.7.9"
+    "vitest": "^0.9.3"
   }
 }

@@ -7,12 +7,9 @@
     "skipLibCheck": true
   },
   "include": [
-    "packages/vue*/src/**/*",
-    "packages/utils/src/**/*",
-    "packages/constants/src/**/*",
-    "packages/element-plus/src/**/*",
-    "packages/web-env.d.ts",
-    "packages/*/package.json"
+    "packages/web/*/src/**/*",
+    "packages/web/*/package.json",
+    "packages/web/env.d.ts"
   ],
-  "exclude": ["packages/**/__tests__/**"]
+  "exclude": ["**/__tests__/**", "**/tests/**"]
 }

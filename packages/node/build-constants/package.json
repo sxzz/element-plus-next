@@ -1,7 +1,7 @@
 {
-  "name": "@element-plus-dev/build-utils",
+  "name": "@element-plus-dev/build-constants",
   "version": "3.0.0-alpha.0",
-  "description": "Build utils for Element Plus.",
+  "description": "Build constants for Element Plus.",
   "homepage": "https://element-plus.org/",
   "keywords": [
     "element-plus",
@@ -9,9 +9,8 @@
     "component library",
     "ui framework",
     "ui",
-    "vue",
     "build",
-    "cli"
+    "constants"
   ],
   "license": "MIT",
   "repository": {
@@ -21,23 +20,16 @@
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "scripts": {
     "build": "tsup",
     "dev": "unbuild --stub",
     "clean": "rimraf ./dist"
   },
-  "dependencies": {
-    "@pnpm/find-workspace-dir": "^4.0.0",
-    "@pnpm/find-workspace-packages": "^4.0.0",
-    "@pnpm/logger": "^4.0.0",
-    "consola": "^2.15.3",
-    "typescript": "^4.6.2"
-  },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "tsup": "^5.12.1",
-    "unbuild": "^0.7.0"
+    "tsup": "^5.12.4",
+    "unbuild": "^0.7.2"
   }
 }

@@ -9,7 +9,7 @@ import { getWorkspaceRoot, getWorkspacePackages, getDependencies } from '../src'
 describe('workspace', () => {
   it('getWorkspaceRoot should work', async () => {
     const root = await getWorkspaceRoot()
-    expect(root).toBe(path.resolve(__dirname, '../../..'))
+    expect(root).toBe(path.resolve(__dirname, '../../../..'))
   })
 
   it('getWorkspacePackages should work', async () => {

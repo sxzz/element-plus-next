@@ -1,6 +1,6 @@
 import findWorkspaceDir from '@pnpm/find-workspace-dir'
 import findWorkspacePackages from '@pnpm/find-workspace-packages'
-import { PKG_PREFIX } from './constants'
+import { PKG_PREFIX } from '@element-plus-dev/build-constants'
 
 import type { Project } from '@pnpm/find-workspace-packages'
 

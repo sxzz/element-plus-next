@@ -10,8 +10,8 @@
     "**/vite.config.*",
     "**/vitest.config.*",
     "**/vite.init.*",
-    "packages/build*/src/**/*",
-    "packages/build*/package.json"
+    "packages/node/*/src/**/*",
+    "packages/node/*/package.json"
   ],
-  "exclude": ["**/dist"]
+  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"]
 }

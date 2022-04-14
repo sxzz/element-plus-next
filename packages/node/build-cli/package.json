@@ -1,7 +1,7 @@
 {
-  "name": "@element-plus-dev/vue-components",
+  "name": "@element-plus-dev/build-cli",
   "version": "3.0.0-alpha.0",
-  "description": "Vue component for Element Plus.",
+  "description": "Build CLI for Element Plus.",
   "homepage": "https://element-plus.org/",
   "keywords": [
     "element-plus",
@@ -10,7 +10,8 @@
     "ui framework",
     "ui",
     "vue",
-    "components"
+    "build",
+    "cli"
   ],
   "license": "MIT",
   "repository": {
@@ -20,25 +21,28 @@
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "bin": {
+    "ep-cli": "./bin/ep-cli.mjs"
+  },
   "scripts": {
-    "build": "ep-cli build",
+    "build": "tsup",
+    "dev": "unbuild --stub",
     "clean": "rimraf ./dist"
   },
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
   "dependencies": {
-    "@ctrl/tinycolor": "^3.4.0",
-    "@element-plus/icons-vue": "^1.1.4",
-    "@element-plus-dev/utils": "3.0.0-alpha.0",
-    "@element-plus-dev/vue-utils": "3.0.0-alpha.0"
+    "@element-plus-dev/build-utils": "3.0.0-alpha.0",
+    "c12": "^0.2.4",
+    "commander": "^9.1.0",
+    "esbuild": "^0.14.34",
+    "tsup": "^5.12.4",
+    "unplugin-vue": "^2.0.0"
   },
   "devDependencies": {
-    "@element-plus-dev/build-cli": "3.0.0-alpha.0",
+    "@babel/types": "^7.17.0",
     "rimraf": "^3.0.2",
+    "unbuild": "^0.7.2",
     "vue": "^3.2.31"
   }
 }

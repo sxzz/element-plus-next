@@ -7,8 +7,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "packages/*/src/**/*",
-    "packages/*/package.json",
+    "packages/web/*/src/**/*",
+    "packages/web/*/package.json",
     "packages/**/__tests__/**/*",
     "packages/**/tests/**/*"
   ]
