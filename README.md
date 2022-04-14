@@ -25,7 +25,7 @@ Element Plus 3. Exploring... 🧭
 
 ## Packages
 
-- Core
+- Web
   - [x] `element-plus`
   - [x] `@element-plus-dev/constants`
   - [x] `@element-plus-dev/utils`
@@ -35,8 +35,10 @@ Element Plus 3. Exploring... 🧭
   - [ ] `@element-plus-dev/locale`
   - [ ] `@element-plus-dev/vue-directives`
   - [ ] `@element-plus-dev/vue-hooks`
-- Development
+  - [ ] `@element-plus-dev/metadata`
+- Node
   - [x] `@element-plus-dev/build-cli`
+  - [x] `@element-plus-dev/build-constants`
   - [x] `@element-plus-dev/build-utils`
   - [x] `@element-plus-dev/playground`
 - DX
