@@ -3,6 +3,7 @@
  */
 
 import path from 'path'
+import { describe, it, expect } from 'vitest'
 import { readJSON } from '../src'
 
 describe('fs', () => {

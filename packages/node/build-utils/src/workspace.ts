@@ -21,19 +21,22 @@ export const getWorkspacePackages = async () => {
   ))
 }
 
-export const getDependencies = (pkg: Project, includeDev = false) =>
+export const getDependencies = (
+  pkg: Project,
+  { includeDev = false }: { includeDev?: boolean } = {}
+) =>
   Array.from(
     new Set([
-      ...Object.keys(pkg.manifest.peerDependencies ?? {}),
-      ...Object.keys(pkg.manifest.dependencies ?? {}),
-      ...Object.keys((includeDev ? pkg.manifest.devDependencies : {}) ?? {}),
+      ...Object.keys(pkg.manifest.peerDependencies || {}),
+      ...Object.keys(pkg.manifest.dependencies || {}),
+      ...Object.keys((includeDev ? pkg.manifest.devDependencies : {}) || {}),
     ])
   )
 
 export const getPackage = async (packageName?: string) => {
   const pkgs = await getWorkspacePackages()
   if (packageName) {
-    return pkgs[packageName] ?? pkgs[`${PKG_PREFIX}${packageName}`]
+    return pkgs[packageName] ?? pkgs[`${PKG_PREFIX}/${packageName}`]
   } else {
     return Object.values(pkgs).find((pkg) => pkg.dir === process.cwd())!
   }
