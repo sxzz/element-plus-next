@@ -23,7 +23,7 @@
     "url": "https://github.com/element-plus/element-plus/issues"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "preview": "vite preview"
   },
