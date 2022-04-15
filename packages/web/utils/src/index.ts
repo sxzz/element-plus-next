@@ -1,4 +1,4 @@
-// Internal code, not guaranteed semver.
+// internal code, semver is not guaranteed.
 
 export * from './dom'
 export * from './animation'

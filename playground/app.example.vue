@@ -1,6 +1,7 @@
 <template>
   <div class="play-container">
-    <h1>Hello, Element Plus! <ElementPlus class="icon" /></h1>
+    <h1>Hello, Element Plus!</h1>
+    <ElementPlus class="icon" />
   </div>
 </template>
 

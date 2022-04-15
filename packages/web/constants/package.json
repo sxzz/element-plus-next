@@ -20,6 +20,7 @@
     "url": "https://github.com/element-plus/element-plus/issues"
   },
   "main": "./dist/index.js",
+  "main:dev": "./src/index.ts",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {

@@ -15,9 +15,10 @@ export const getTsConfig = async (tsconfigPath: string) => {
   )
 
   if (parsedConfig.errors.length > 0) {
-    throw new AggregateError(
-      parsedConfig.errors.map((error) => error.messageText),
-      'Promises rejected.'
+    throw new SyntaxError(
+      `Promises rejected.\n${parsedConfig.errors
+        .map((error) => error.messageText)
+        .join('\n')}`
     )
   }
 

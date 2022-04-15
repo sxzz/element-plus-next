@@ -23,10 +23,9 @@ describe('typescript', () => {
     vi.spyOn(fs, 'readFileSync').mockReturnValue('{}')
 
     const error = await getTsConfig('/wrong/content').catch((err) => err)
-    expect(error.errors).toMatchInlineSnapshot(`
-      [
-        "No inputs were found in config file 'tsconfig.json'. Specified 'include' paths were '[\\"**/*\\"]' and 'exclude' paths were '[]'.",
-      ]
+    expect(error.errors || error).toMatchInlineSnapshot(`
+      [SyntaxError: Promises rejected.
+      No inputs were found in config file 'tsconfig.json'. Specified 'include' paths were '["**/*"]' and 'exclude' paths were '[]'.]
     `)
   })
 })
