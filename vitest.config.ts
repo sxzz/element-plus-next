@@ -2,7 +2,7 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   resolve: {
-    mainFields: ['main:dev'],
+    mainFields: ['module:dev', 'module', 'jsnext:main', 'jsnext'],
   },
   test: {
     environment: 'jsdom',

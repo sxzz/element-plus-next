@@ -22,7 +22,7 @@
     "url": "https://github.com/element-plus/element-plus/issues"
   },
   "main": "dist/index.cjs",
-  "main:dev": "./src/index.ts",
+  "module:dev": "./src/index.ts",
   "module": "dist/index.mjs",
   "scripts": {
     "build": "tsup",
