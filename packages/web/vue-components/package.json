@@ -40,6 +40,6 @@
   "devDependencies": {
     "@element-plus-dev/build-cli": "3.0.0-alpha.0",
     "rimraf": "^3.0.2",
-    "vue": "^3.2.31"
+    "vue": "^3.2.33"
   }
 }

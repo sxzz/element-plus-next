@@ -34,16 +34,16 @@
   },
   "dependencies": {
     "@element-plus-dev/build-utils": "3.0.0-alpha.0",
-    "c12": "^0.2.4",
-    "commander": "^9.1.0",
-    "esbuild": "^0.14.34",
-    "tsup": "^5.12.4",
+    "c12": "^0.2.7",
+    "commander": "^9.2.0",
+    "esbuild": "^0.14.38",
+    "tsup": "^5.12.6",
     "unplugin-vue": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/types": "^7.17.0",
+    "@babel/types": "^7.17.10",
     "rimraf": "^3.0.2",
-    "unbuild": "^0.7.2",
-    "vue": "^3.2.31"
+    "unbuild": "^0.7.4",
+    "vue": "^3.2.33"
   }
 }

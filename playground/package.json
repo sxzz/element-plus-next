@@ -31,14 +31,14 @@
     "@element-plus-dev/theme-chalk": "workspace:*",
     "@element-plus/icons-vue": "^1.1.4",
     "element-plus": "workspace:*",
-    "vue": "^3.2.31"
+    "vue": "^3.2.33"
   },
   "devDependencies": {
     "@element-plus-dev/build-utils": "workspace:*",
     "@vitejs/plugin-vue": "^2.3.1",
-    "sass": "^1.50.0",
-    "typescript": "^4.6.3",
+    "sass": "^1.51.0",
+    "typescript": "^4.6.4",
     "unplugin-vue-components": "^0.19.3",
-    "vite": "^2.9.1"
+    "vite": "^2.9.6"
   }
 }
