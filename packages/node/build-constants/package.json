@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "tsup": "^5.12.4",
-    "unbuild": "^0.7.2"
+    "tsup": "^5.12.6",
+    "unbuild": "^0.7.4"
   }
 }
