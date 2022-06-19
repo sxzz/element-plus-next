@@ -39,6 +39,7 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
+    "@element-plus-next/constants": "workspace:*",
     "@element-plus-next/vue-components": "workspace:*"
   },
   "devDependencies": {

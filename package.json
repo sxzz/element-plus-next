@@ -29,6 +29,7 @@
     "@types/jsdom": "^16.2.14",
     "@types/node": "*",
     "@vitest/ui": "^0.15.1",
+    "@vue/runtime-core": "^3.2.37",
     "c8": "^7.11.3",
     "jiti": "^1.13.0",
     "jsdom": "^19.0.0",
