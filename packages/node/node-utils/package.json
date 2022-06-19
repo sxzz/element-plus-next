@@ -22,6 +22,9 @@
     "url": "https://github.com/element-plus/element-plus/issues"
   },
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "dev": "./src/index.ts",
