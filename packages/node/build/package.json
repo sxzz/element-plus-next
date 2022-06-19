@@ -43,6 +43,9 @@
     "clean": "rimraf ./dist"
   },
   "dependencies": {
+    "@element-plus-next/node-constants": "workspace:*",
+    "@element-plus-next/node-utils": "workspace:*",
+    "@element-plus-next/workspace": "workspace:*",
     "esbuild": "^0.14.34",
     "local-pkg": "^0.4.1",
     "tsup": "npm:@sxzz/tsup@^6.1.2",
@@ -50,9 +53,6 @@
     "unplugin-vue": "^2.2.1"
   },
   "devDependencies": {
-    "@element-plus-next/node-constants": "workspace:*",
-    "@element-plus-next/node-utils": "workspace:*",
-    "@element-plus-next/workspace": "workspace:*",
     "tsx": "^3.4.3",
     "vue": "^3.2.37"
   }
