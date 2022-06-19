@@ -20,8 +20,15 @@
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
   "main": "./dist/index.js",
-  "module:dev": "./src/index.ts",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {

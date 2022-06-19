@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
+  "type": "module",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",

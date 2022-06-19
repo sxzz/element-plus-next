@@ -34,7 +34,6 @@
     "./*": "./*"
   },
   "module": "./dist/index.js",
-  "module:dev": "./src/index.ts",
   "bin": {
     "ep-cli": "./bin/ep-cli.js"
   },

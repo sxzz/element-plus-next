@@ -30,7 +30,6 @@
     "./*": "./*"
   },
   "module": "./dist/index.js",
-  "module:dev": "./src/index.ts",
   "scripts": {
     "build": "ep-cli build",
     "clean": "rimraf ./dist"

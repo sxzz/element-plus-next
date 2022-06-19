@@ -7,7 +7,7 @@ import './vite.init'
 export default defineConfig(async () => {
   return {
     resolve: {
-      mainFields: ['module:dev', 'module', 'jsnext:main', 'jsnext'],
+      conditions: ['dev'],
     },
     plugins: [
       Vue({

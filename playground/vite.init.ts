@@ -1,8 +1,9 @@
-import { existsSync, writeFileSync, readFileSync } from 'fs'
+import { existsSync } from 'fs'
+import { writeFile, readFile } from 'fs/promises'
 
 const app = 'src/App.vue'
 const example = 'app.example.vue'
 
 if (!existsSync(app)) {
-  writeFileSync(app, readFileSync(example))
+  await writeFile(app, await readFile(example))
 }
