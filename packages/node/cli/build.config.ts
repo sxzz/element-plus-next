@@ -1,8 +1,6 @@
-import { defineConfig } from '@element-plus-next/build/config'
-
-export default defineConfig({
+export default {
   platform: 'node',
   tsup: {
     format: ['esm'],
   },
-})
+}

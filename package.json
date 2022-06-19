@@ -8,10 +8,10 @@
   },
   "scripts": {
     "dev": "pnpm -C playground dev",
-    "dev:node": "pnpm run --filter \"./packages/node/*\" --parallel dev",
     "build": "run-s build:node build:web",
     "build:node": "pnpm run --filter \"./packages/node/*\" --parallel build",
     "build:web": "pnpm run --filter \"./packages/web/*\" --parallel build",
+    "clean": "pnpm run -r --parallel clean",
     "test": "vitest",
     "typecheck": "run-p typecheck:web typecheck:playground typecheck:node typecheck:vite-config typecheck:vitest",
     "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
@@ -21,7 +21,7 @@
     "typecheck:vitest": "vue-tsc -p tsconfig.vitest.json --composite false --noEmit"
   },
   "devDependencies": {
-    "@element-plus-next/build": "workspace:*",
+    "@element-plus-next/build": "npm:@element-plus-next/build@0.0.0-alpha.1",
     "@element-plus-next/cli": "npm:@element-plus-next/cli@0.0.0-alpha.0",
     "@element-plus-next/eslint-config": "workspace:*",
     "@element-plus-next/tsconfig": "workspace:*",

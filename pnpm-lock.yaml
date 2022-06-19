@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@element-plus-next/build': workspace:*
+      '@element-plus-next/build': npm:@element-plus-next/build@0.0.0-alpha.1
       '@element-plus-next/cli': npm:@element-plus-next/cli@0.0.0-alpha.0
       '@element-plus-next/eslint-config': workspace:*
       '@element-plus-next/tsconfig': workspace:*
@@ -20,7 +20,7 @@ importers:
       typescript: ^4.7.4
       vitest: ^0.15.1
     devDependencies:
-      '@element-plus-next/build': link:packages/node/build
+      '@element-plus-next/build': 0.0.0-alpha.1_typescript@4.7.4
       '@element-plus-next/cli': 0.0.0-alpha.0
       '@element-plus-next/eslint-config': link:packages/node/eslint-config
       '@element-plus-next/tsconfig': link:packages/node/tsconfig
@@ -49,15 +49,15 @@ importers:
       unplugin-vue: ^2.2.1
       vue: ^3.2.37
     dependencies:
-      '@element-plus-next/node-constants': link:../node-constants
-      '@element-plus-next/node-utils': link:../node-utils
-      '@element-plus-next/workspace': link:../workspace
       esbuild: 0.14.46
       local-pkg: 0.4.1
       tsup: /@sxzz/tsup/6.2.0
       unconfig: 0.3.4
       unplugin-vue: 2.2.1_esbuild@0.14.46+vue@3.2.37
     devDependencies:
+      '@element-plus-next/node-constants': link:../node-constants
+      '@element-plus-next/node-utils': link:../node-utils
+      '@element-plus-next/workspace': link:../workspace
       tsx: 3.4.3
       vue: 3.2.37
 
@@ -65,32 +65,11 @@ importers:
     specifiers:
       '@element-plus-next/build': workspace:*
       '@element-plus-next/node-utils': workspace:*
-      '@pnpm/find-workspace-dir': ^4.0.0
-      '@pnpm/find-workspace-packages': ^4.0.0
-      '@pnpm/logger': ^4.0.0
       commander: ^9.1.0
-      consola: ^2.15.3
-      tsup: npm:@sxzz/tsup@^6.2.0
-      tsx: ^3.4.3
-      typescript: ^4.7.4
-      unconfig: ^0.3.4
-      unplugin: ^0.7.0
-      unplugin-vue: ^2.2.1
     dependencies:
-      '@pnpm/find-workspace-dir': 4.0.1
-      '@pnpm/find-workspace-packages': 4.0.0_@pnpm+logger@4.0.0
-      '@pnpm/logger': 4.0.0
-      commander: 9.3.0
-      consola: 2.15.3
-      tsup: /@sxzz/tsup/6.2.0_typescript@4.7.4
-      typescript: 4.7.4
-      unconfig: 0.3.4
-      unplugin: 0.7.0
-      unplugin-vue: 2.2.1
-    devDependencies:
       '@element-plus-next/build': link:../build
       '@element-plus-next/node-utils': link:../node-utils
-      tsx: 3.4.3
+      commander: 9.3.0
 
   packages/node/eslint-config:
     specifiers:
@@ -468,6 +447,26 @@ packages:
     resolution: {integrity: sha512-ej5oVy6lykXsvieQtqZxCOaLT+xD4+QNarq78cIYISHmZXshCvROLudpQN3lfL8G0NL7plMSSK+zlyvCaIJ4Iw==}
     engines: {node: '>=10'}
     dev: false
+
+  /@element-plus-next/build/0.0.0-alpha.1_typescript@4.7.4:
+    resolution: {integrity: sha512-CVf0yjm1pOQq1jWc0ZVecebGOPcnkUFBzqhRsxXElgOl9+hj9h9cTfjluaEtLZ2OSKZ87U2bPgwXkdyP1ncugA==}
+    dependencies:
+      esbuild: 0.14.46
+      local-pkg: 0.4.1
+      tsup: /@sxzz/tsup/6.2.0_typescript@4.7.4
+      unconfig: 0.3.4
+      unplugin-vue: 2.2.1_esbuild@0.14.46
+    transitivePeerDependencies:
+      - '@swc/core'
+      - postcss
+      - rollup
+      - supports-color
+      - ts-node
+      - typescript
+      - vite
+      - vue
+      - webpack
+    dev: true
 
   /@element-plus-next/cli/0.0.0-alpha.0:
     resolution: {integrity: sha512-4LGtyQi4VNRuR4pQFLA2K8Ndhi5Nn5MYZKUFIXjcOhuajdpdOCdFQsXNXQwxG2vUzQdbc4o8y4CAA9S4hkLNvA==}
@@ -907,6 +906,7 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - ts-node
+    dev: true
 
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -5037,6 +5037,30 @@ packages:
       - rollup
       - supports-color
       - webpack
+    dev: true
+
+  /unplugin-vue/2.2.1_esbuild@0.14.46:
+    resolution: {integrity: sha512-MToZFqW7v6dKqm2QatKCegWoQ0FwucSASbz1TPtyDV4t020whxGn44+HfD4V38NjoMyiin/0Z03vs1yn5yF1vQ==}
+    engines: {node: '>=14.17.0'}
+    peerDependencies:
+      vite: ^2.5.10
+      vue: ^3.2.25
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      debug: 4.3.4
+      hash-sum: 2.0.0
+      source-map: 0.6.1
+      tsx: 3.4.3
+      unplugin: 0.6.3_esbuild@0.14.46
+    transitivePeerDependencies:
+      - esbuild
+      - rollup
+      - supports-color
+      - webpack
+    dev: true
 
   /unplugin-vue/2.2.1_esbuild@0.14.46+vue@3.2.37:
     resolution: {integrity: sha512-MToZFqW7v6dKqm2QatKCegWoQ0FwucSASbz1TPtyDV4t020whxGn44+HfD4V38NjoMyiin/0Z03vs1yn5yF1vQ==}
@@ -5082,6 +5106,7 @@ packages:
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.3
+    dev: true
 
   /unplugin/0.6.3_esbuild@0.14.46:
     resolution: {integrity: sha512-CoW88FQfCW/yabVc4bLrjikN9HC8dEvMU4O7B6K2jsYMPK0l6iAnd9dpJwqGcmXJKRCU9vwSsy653qg+RK0G6A==}
@@ -5104,7 +5129,6 @@ packages:
       esbuild: 0.14.46
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.3
-    dev: false
 
   /unplugin/0.6.3_vite@2.9.12:
     resolution: {integrity: sha512-CoW88FQfCW/yabVc4bLrjikN9HC8dEvMU4O7B6K2jsYMPK0l6iAnd9dpJwqGcmXJKRCU9vwSsy653qg+RK0G6A==}
@@ -5150,6 +5174,7 @@ packages:
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.3
+    dev: true
 
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
