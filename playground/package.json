@@ -1,18 +1,15 @@
 {
   "private": true,
-  "name": "@element-plus-dev/playground",
+  "name": "@element-plus-next/playground",
   "version": "3.0.0-alpha.0",
-  "description": "Build utils for Element Plus.",
+  "description": "Playground for Element Plus.",
   "homepage": "https://element-plus.org/",
   "keywords": [
     "element-plus",
     "element",
     "component library",
     "ui framework",
-    "ui",
-    "vue",
-    "build",
-    "cli"
+    "playground"
   ],
   "license": "MIT",
   "repository": {
@@ -28,17 +25,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@element-plus-dev/theme-chalk": "workspace:*",
+    "@element-plus-next/theme-chalk": "workspace:*",
     "@element-plus/icons-vue": "^1.1.4",
-    "element-plus": "workspace:*",
-    "vue": "^3.2.31"
+    "element-plus-next": "workspace:*",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@element-plus-dev/build-utils": "workspace:*",
     "@vitejs/plugin-vue": "^2.3.1",
     "sass": "^1.50.0",
-    "typescript": "^4.6.3",
-    "unplugin-vue-components": "^0.19.3",
-    "vite": "^2.9.1"
+    "typescript": "^4.7.4",
+    "unplugin-vue-components": "^0.19.6",
+    "vite": "^2.9.12"
   }
 }

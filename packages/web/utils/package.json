@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus-dev/utils",
+  "name": "@element-plus-next/utils",
   "version": "3.0.0-alpha.0",
   "description": "Utils for Element Plus.",
   "homepage": "https://element-plus.org/",
@@ -36,9 +36,7 @@
     "lodash-unified": "^1.0.2"
   },
   "devDependencies": {
-    "@element-plus-dev/build-cli": "3.0.0-alpha.0",
     "@types/lodash-es": "^4.17.6",
-    "rimraf": "^3.0.2",
     "type-fest": "^2.12.2"
   }
 }

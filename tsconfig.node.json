@@ -1,11 +1,8 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "composite": true,
-    "lib": ["ESNext"],
-    "types": ["node"],
-    "skipLibCheck": true
-  },
+  "extends": "@element-plus-next/tsconfig/tsconfig.node.json",
   "include": ["packages/node/**/*", "packages/node/**/*.json"],
-  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"]
+  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"],
+  "compilerOptions": {
+    "composite": true
+  }
 }

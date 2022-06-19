@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@element-plus-dev/eslint-config"]
+  "extends": ["@element-plus-next/eslint-config"]
 }

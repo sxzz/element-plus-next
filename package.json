@@ -13,7 +13,7 @@
     "build:node": "pnpm run --filter \"./packages/node/*\" --parallel build",
     "build:web": "pnpm run --filter \"./packages/web/*\" --parallel build",
     "test": "vitest",
-    "typecheck": "run-p typecheck:node typecheck:vite-config",
+    "typecheck": "run-p typecheck:web typecheck:playground typecheck:node typecheck:vite-config typecheck:vitest",
     "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
     "typecheck:playground": "vue-tsc -p tsconfig.playground.json --composite false --noEmit",
     "typecheck:node": "tsc -p tsconfig.node.json --noEmit",
@@ -21,7 +21,8 @@
     "typecheck:vitest": "vue-tsc -p tsconfig.vitest.json --composite false --noEmit"
   },
   "devDependencies": {
-    "@element-plus-dev/eslint-config": "workspace:*",
+    "@element-plus-next/eslint-config": "workspace:*",
+    "@element-plus-next/tsconfig": "workspace:*",
     "@types/jsdom": "^16.2.14",
     "@types/node": "*",
     "@vitest/ui": "^0.15.1",
@@ -29,6 +30,7 @@
     "jiti": "^1.13.0",
     "jsdom": "^19.0.0",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "vitest": "^0.15.1"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus-dev/vue-utils",
+  "name": "@element-plus-next/vue-utils",
   "version": "3.0.0-alpha.0",
   "description": "Vue utils for Element Plus.",
   "homepage": "https://element-plus.org/",
@@ -32,8 +32,8 @@
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@element-plus-dev/constants": "3.0.0-alpha.0",
-    "@element-plus-dev/utils": "3.0.0-alpha.0",
+    "@element-plus-next/constants": "workspace:*",
+    "@element-plus-next/utils": "workspace:*",
     "@element-plus/icons-vue": "^1.1.4",
     "@vue/shared": "^3.2.31",
     "lodash": "^4.17.21",
@@ -41,7 +41,6 @@
     "lodash-unified": "^1.0.2"
   },
   "devDependencies": {
-    "@element-plus-dev/build-cli": "3.0.0-alpha.0",
     "@types/lodash-es": "^4.17.6",
     "rimraf": "^3.0.2",
     "vue": "^3.2.31"

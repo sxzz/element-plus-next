@@ -1,0 +1,31 @@
+{
+  "name": "@element-plus-next/workspace",
+  "version": "3.0.0-alpha.0",
+  "description": "workspace manager for Element Plus.",
+  "homepage": "https://element-plus.org/",
+  "keywords": [
+    "element-plus",
+    "element",
+    "component library",
+    "ui framework",
+    "tsconfig"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/element-plus.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/element-plus/element-plus/issues"
+  },
+  "main": "dist/index.cjs",
+  "module:dev": "./src/index.ts",
+  "module": "dist/index.mjs",
+  "scripts": {},
+  "dependencies": {
+    "@pnpm/find-workspace-dir": "^4.0.0",
+    "@pnpm/find-workspace-packages": "^4.0.0",
+    "@pnpm/logger": "^4.0.0"
+  }
+}

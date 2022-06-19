@@ -1,17 +1,17 @@
 {
-  "extends": "./tsconfig.web.json",
-  "compilerOptions": {
-    "composite": true,
-    "types": []
-  },
+  "extends": "@element-plus-next/tsconfig/tsconfig.web.json",
   "include": [
     "packages/web/*/src/**/*",
     "packages/web/*/package.json",
     "packages/web/env.d.ts",
+    "packages/web/app.example.vue",
 
     // playground
     "playground/main.ts",
     "playground/env.d.ts",
     "playground/src/**/*"
-  ]
+  ],
+  "compilerOptions": {
+    "composite": true
+  }
 }

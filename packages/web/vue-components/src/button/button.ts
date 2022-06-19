@@ -1,5 +1,5 @@
-import { tuple } from '@element-plus-dev/utils'
-import { buildProps } from '@element-plus-dev/vue-utils'
+import { tuple } from '@element-plus-next/utils'
+import { buildProps } from '@element-plus-next/vue-utils'
 
 export const buttonTypes = tuple(
   'default',

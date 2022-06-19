@@ -8,7 +8,7 @@ import {
   isVNode,
   camelize,
 } from 'vue'
-import { hasOwn, debugWarn } from '@element-plus-dev/utils'
+import { hasOwn, debugWarn } from '@element-plus-next/utils'
 import type { VNode, VNodeChild, VNodeNormalizedChildren } from 'vue'
 
 const SCOPE = 'utils/vue/vnode'

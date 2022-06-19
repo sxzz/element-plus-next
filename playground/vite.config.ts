@@ -1,3 +1,4 @@
+import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
@@ -15,6 +16,7 @@ export default defineConfig(async () => {
       Components({
         // TODO: vue-components-resolver
         // resolvers: [ElementPlusResolver()],
+        dts: path.resolve('src/components.d.ts'),
       }),
     ],
   }

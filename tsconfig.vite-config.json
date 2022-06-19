@@ -1,16 +1,13 @@
 {
-  "extends": "./tsconfig.node.json",
-  "compilerOptions": {
-    "composite": true,
-    "types": ["node", "vitest"],
-    "target": "ES2021",
-    "lib": ["ES2021"]
-  },
+  "extends": "@element-plus-next/tsconfig/tsconfig.vite-config.json",
   "include": [
     "**/vite.config.*",
     "**/vitest.config.*",
     "**/vite.init.*",
     "packages/node/*/src/**/*",
     "packages/node/*/package.json"
-  ]
+  ],
+  "compilerOptions": {
+    "composite": true
+  }
 }

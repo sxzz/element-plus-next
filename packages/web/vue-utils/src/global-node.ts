@@ -1,4 +1,4 @@
-import { isClient } from '@element-plus-dev/utils'
+import { isClient } from '@element-plus-next/utils'
 
 const globalNodes: HTMLElement[] = []
 let target: HTMLElement = isClient ? document.body : (undefined as any)

@@ -1,6 +1,6 @@
 import { defaultInstaller } from './installer'
 
-export * from '@element-plus-dev/vue-components'
+export * from '@element-plus-next/vue-components'
 export * from './version'
 export * from './installer'
 

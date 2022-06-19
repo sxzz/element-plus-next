@@ -1,15 +1,12 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "composite": true,
-    "lib": ["ES2018", "DOM"],
-    "jsx": "preserve",
-    "skipLibCheck": true
-  },
+  "extends": "@element-plus-next/tsconfig/tsconfig.web.json",
   "include": [
     "packages/web/*/src/**/*",
     "packages/web/*/package.json",
     "packages/web/env.d.ts"
   ],
-  "exclude": ["**/__tests__/**", "**/tests/**"]
+  "exclude": ["**/__tests__/**", "**/tests/**"],
+  "compilerOptions": {
+    "composite": true
+  }
 }

@@ -6,7 +6,7 @@ Element Plus 3. Exploring... 🧭
 
 - 🔥 Real Monorepo - pnpm
   - Separate each package
-- ⚡️ Super fast! - [ESBuild](https://esbuild.github.io/) / [tsup](https://github.com/egoist/tsup) / [unbuild](https://github.com/unjs/unbuild)
+- ⚡️ Super fast! - [ESBuild](https://esbuild.github.io/) / [tsup](https://github.com/egoist/tsup)
 - ⛔️ Stricter TypeScript type check
 
 ## Plan
@@ -27,24 +27,26 @@ Element Plus 3. Exploring... 🧭
 
 - Web
   - [x] `element-plus`
-  - [x] `@element-plus-dev/constants`
-  - [x] `@element-plus-dev/utils`
-  - [x] `@element-plus-dev/theme-chalk`
-  - [x] `@element-plus-dev/vue-components`
-  - [x] `@element-plus-dev/vue-utils`
-  - [ ] `@element-plus-dev/locale`
-  - [ ] `@element-plus-dev/vue-directives`
-  - [ ] `@element-plus-dev/vue-hooks`
-  - [ ] `@element-plus-dev/metadata`
+  - [x] `@element-plus-next/constants`
+  - [x] `@element-plus-next/utils`
+  - [x] `@element-plus-next/theme-chalk`
+  - [x] `@element-plus-next/vue-components`
+  - [x] `@element-plus-next/vue-utils`
+  - [ ] `@element-plus-next/locale`
+  - [ ] `@element-plus-next/vue-directives`
+  - [ ] `@element-plus-next/vue-hooks`
+  - [ ] `@element-plus-next/metadata`
 - Node
-  - [x] `@element-plus-dev/build-cli`
-  - [x] `@element-plus-dev/build-constants`
-  - [x] `@element-plus-dev/build-utils`
-  - [x] `@element-plus-dev/playground`
+  - [x] `@element-plus-next/cli`
+  - [x] `@element-plus-next/build`
+  - [x] `@element-plus-next/node-utils`
+  - [x] `@element-plus-next/node-constants`
 - DX
-  - [x] `@element-plus-dev/eslint-config`
+  - [x] `@element-plus-next/tsconfig`
+  - [x] `@element-plus-next/eslint-config`
+  - [x] `@element-plus-next/playground`
 - Documentation
-  - [x] `@element-plus-dev/docs`
+  - [x] `@element-plus-next/docs`
 
 ## Reference
 

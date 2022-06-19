@@ -1,3 +1,3 @@
-import { defineConfig } from '@element-plus-dev/build-cli/src/config'
+import { defineConfig } from '@element-plus-next/build-cli/src/config'
 
 export default defineConfig({})

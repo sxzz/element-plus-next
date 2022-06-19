@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext"],
+    "allowJs": false,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "types": [],
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+
+    "outDir": "dist",
+    "baseUrl": "../../..",
+    "paths": {
+      "element-plus": ["packages/web/element-plus/src/index"],
+      "@element-plus-next/*": ["packages/web/*/src", "packages/node/*/src"]
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus-dev/theme-chalk",
+  "name": "@element-plus-next/theme-chalk",
   "version": "3.0.0-alpha.0",
   "description": "Theme chalk for Element Plus.",
   "homepage": "https://element-plus.org/",
@@ -29,7 +29,7 @@
     "clean": "rimraf ./dist"
   },
   "devDependencies": {
-    "@element-plus-dev/build-utils": "3.0.0-alpha.0",
+    "@element-plus-next/node-utils": "workspace:*",
     "@types/clean-css": "^4.2.5",
     "autoprefixer": "^10.4.4",
     "chalk": "^5.0.1",
