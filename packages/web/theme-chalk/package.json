@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/element-plus/element-plus.git"
   },
+  "type": "module",
   "files": [
     "dist",
     "src"
