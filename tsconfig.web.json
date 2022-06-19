@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
-    "lib": ["es2018", "dom"],
+    "lib": ["ES2018", "DOM"],
     "jsx": "preserve",
     "skipLibCheck": true
   },
