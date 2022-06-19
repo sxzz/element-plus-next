@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@6.32.3",
+  "packageManager": "pnpm@7.2.1",
   "description": "Element Plus Monorepo.",
   "license": "MIT",
   "engines": {
@@ -8,12 +8,17 @@
   },
   "scripts": {
     "dev": "pnpm -C playground dev",
-    "dev:node": "pnpm --filter ./packages/node run dev --parallel",
-    "build": "pnpm run build:node && pnpm run build:web",
-    "build:node": "pnpm --filter ./packages/node run build --parallel",
-    "build:web": "pnpm --filter ./packages/web run build --parallel",
+    "dev:node": "pnpm run --filter \"./packages/node/*\" --parallel dev",
+    "build": "run-s build:node build:web",
+    "build:node": "pnpm run --filter \"./packages/node/*\" --parallel build",
+    "build:web": "pnpm run --filter \"./packages/web/*\" --parallel build",
     "test": "vitest",
-    "typecheck": "pnpm vue-tsc --noEmit -p tsconfig.web.json --composite false && pnpm vue-tsc --noEmit -p tsconfig.playground.json --composite false && pnpm tsc --noEmit -p tsconfig.node.json && pnpm tsc --noEmit -p tsconfig.vite-config.json && pnpm vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "typecheck": "run-p typecheck:node typecheck:vite-config",
+    "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
+    "typecheck:playground": "vue-tsc -p tsconfig.playground.json --composite false --noEmit",
+    "typecheck:node": "tsc -p tsconfig.node.json --noEmit",
+    "typecheck:vite-config": "tsc -p tsconfig.vite-config.json --noEmit",
+    "typecheck:vitest": "vue-tsc -p tsconfig.vitest.json --composite false --noEmit"
   },
   "devDependencies": {
     "@element-plus-dev/eslint-config": "workspace:*",
@@ -23,6 +28,7 @@
     "c8": "^7.11.3",
     "jiti": "^1.13.0",
     "jsdom": "^19.0.0",
+    "npm-run-all": "^4.1.5",
     "vitest": "^0.13.1"
   }
 }
