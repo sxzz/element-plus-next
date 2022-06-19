@@ -7,13 +7,17 @@ import type { Project } from '@pnpm/find-workspace-packages'
 let workspaceRoot: string
 export const getWorkspaceRoot = async () => {
   if (workspaceRoot) return workspaceRoot
-  return (workspaceRoot = (await findWorkspaceDir(__dirname))!)
+  return (workspaceRoot = (await (findWorkspaceDir as any).default(
+    process.cwd()
+  ))!)
 }
 
 let pkgs: Record<string, Project>
 export const getWorkspacePackages = async () => {
   if (pkgs) return pkgs
-  const _pkgs = await findWorkspacePackages(await getWorkspaceRoot())
+  const _pkgs: Project[] = await (findWorkspacePackages as any).default(
+    await getWorkspaceRoot()
+  )
   return (pkgs = Object.fromEntries(
     _pkgs
       .filter((pkg) => !!pkg?.manifest?.name)

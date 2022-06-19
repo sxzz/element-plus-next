@@ -21,8 +21,11 @@
     "typecheck:vitest": "vue-tsc -p tsconfig.vitest.json --composite false --noEmit"
   },
   "devDependencies": {
+    "@element-plus-next/build": "workspace:*",
+    "@element-plus-next/cli": "npm:@element-plus-next/cli@0.0.0-alpha.0",
     "@element-plus-next/eslint-config": "workspace:*",
     "@element-plus-next/tsconfig": "workspace:*",
+    "@milahu/patch-package": "^6.4.14",
     "@types/jsdom": "^16.2.14",
     "@types/node": "*",
     "@vitest/ui": "^0.15.1",
@@ -31,6 +34,7 @@
     "jsdom": "^19.0.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
+    "typescript": "^4.7.4",
     "vitest": "^0.15.1"
   }
 }

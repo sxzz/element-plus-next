@@ -1,3 +1,3 @@
 export * from './utils'
 export * from './build'
-export * from './types'
+export type { BuildOptions } from './config'

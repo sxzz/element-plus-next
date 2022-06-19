@@ -18,15 +18,18 @@
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "main": "./dist/index.cjs",
-  "module:dev": "./src/index.ts",
-  "module": "./dist/index.mjs",
-  "scripts": {
-    "build": "tsup",
-    "clean": "rimraf ./dist"
+  "type": "module",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
   },
-  "devDependencies": {
-    "rimraf": "^3.0.2",
-    "tsup": "^5.12.4"
+  "module": "./dist/index.js",
+  "module:dev": "./src/index.ts",
+  "scripts": {
+    "build": "ep-cli build",
+    "clean": "rimraf ./dist"
   }
 }

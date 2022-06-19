@@ -1,19 +1,35 @@
+import path from 'path'
 import { loadConfig } from 'unconfig'
-import type { Project } from '@element-plus-next/node-utils'
-import type { BuildOptions } from '../types'
+import type { Format } from 'tsup'
+import type { Project } from '@element-plus-next/workspace'
+import type { BuildOptions } from '../config'
 
-export type BuildOptionsResolved = Required<BuildOptions>
+export type BuildOptionsResolved = Required<BuildOptions> & {
+  tsup: { entry: string[] }
+  format: Format[]
+}
 
-export function resolveConfig(options?: BuildOptions): BuildOptionsResolved {
-  return {
+export function normalizeConfig(
+  pkg: Project,
+  options?: BuildOptions
+): BuildOptionsResolved {
+  const normalized = {
     name: 'index',
-    format: ['cjs', 'esm'],
+    minify: false,
+    vue: false,
+    dts: true,
+    platform: 'web',
+    tsup: {},
     ...(options ?? {}),
-  }
+  } as BuildOptionsResolved
+  normalized.tsup.entry ||= [path.resolve(pkg.dir, 'src/index.ts')]
+  normalized.tsup.format ||= ['esm', 'cjs']
+  return normalized
 }
 
 export async function importConfig(
-  pkg: Project
+  pkg: Project,
+  userConfig?: BuildOptions
 ): Promise<BuildOptionsResolved> {
   const { config } = await loadConfig<BuildOptions>({
     sources: [
@@ -25,5 +41,5 @@ export async function importConfig(
     ],
     cwd: pkg.dir,
   })
-  return resolveConfig(config)
+  return normalizeConfig(pkg, { ...config, ...userConfig })
 }

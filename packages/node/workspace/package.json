@@ -15,15 +15,25 @@
     "type": "git",
     "url": "git+https://github.com/element-plus/element-plus.git"
   },
-  "type": "module",
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "main": "dist/index.cjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "module": "./dist/index.js",
   "module:dev": "./src/index.ts",
-  "module": "dist/index.mjs",
-  "scripts": {},
+  "scripts": {
+    "build": "ep-cli build",
+    "clean": "rimraf ./dist"
+  },
   "dependencies": {
+    "@element-plus-next/node-constants": "workspace:*",
     "@pnpm/find-workspace-dir": "^4.0.0",
     "@pnpm/find-workspace-packages": "^4.0.0",
     "@pnpm/logger": "^4.0.0"

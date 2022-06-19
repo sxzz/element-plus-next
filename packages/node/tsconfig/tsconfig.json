@@ -19,6 +19,7 @@
     "baseUrl": "../../..",
     "paths": {
       "element-plus": ["packages/web/element-plus/src/index"],
+      "@element-plus-next/build/config": ["packages/node/build/src/config.ts"],
       "@element-plus-next/*": ["packages/web/*/src", "packages/node/*/src"]
     }
   }

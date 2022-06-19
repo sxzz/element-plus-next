@@ -18,15 +18,25 @@
     "type": "git",
     "url": "git+https://github.com/element-plus/element-plus.git"
   },
-  "type": "module",
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "main": "dist/index.cjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./config": {
+      "dev": "./src/config.ts",
+      "import": "./dist/config.js"
+    },
+    "./*": "./*"
+  },
+  "module": "./dist/index.js",
   "module:dev": "./src/index.ts",
-  "module": "dist/index.mjs",
   "scripts": {
-    "build": "tsup",
+    "build": "ep-cli build",
     "clean": "rimraf ./dist"
   },
   "dependencies": {
@@ -34,12 +44,13 @@
     "@element-plus-next/node-utils": "workspace:*",
     "@element-plus-next/workspace": "workspace:*",
     "esbuild": "^0.14.34",
-    "tsup": "^6.1.2",
+    "local-pkg": "^0.4.1",
+    "tsup": "npm:@sxzz/tsup@^6.1.2",
     "unconfig": "^0.3.4",
     "unplugin-vue": "^2.2.1"
   },
   "devDependencies": {
-    "local-pkg": "^0.4.1",
+    "tsx": "^3.4.3",
     "vue": "^3.2.37"
   }
 }

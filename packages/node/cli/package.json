@@ -21,22 +21,26 @@
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "main": "dist/index.cjs",
+  "type": "module",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "module": "./dist/index.js",
   "module:dev": "./src/index.ts",
-  "module": "dist/index.mjs",
   "bin": {
-    "ep-cli": "./bin/ep-cli.mjs"
+    "ep-cli": "./bin/ep-cli.js"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "ep-cli build",
     "clean": "rimraf ./dist"
   },
   "dependencies": {
     "@element-plus-next/build": "workspace:*",
-    "@element-plus-next/utils": "workspace:*",
+    "@element-plus-next/node-utils": "workspace:*",
     "commander": "^9.1.0"
-  },
-  "devDependencies": {
-    "tsup": "^6.1.2"
   }
 }
