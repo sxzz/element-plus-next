@@ -1,5 +1,5 @@
 import path from 'path'
-import { promises as fs } from 'fs'
+import { rm } from 'fs/promises'
 import { build as tsup } from 'tsup'
 import Vue from 'unplugin-vue/esbuild'
 import { getPackage } from '@element-plus-next/node-utils'
@@ -25,7 +25,7 @@ export async function build(packageName?: string) {
 
   const plugins: Plugin[] = [Vue()]
 
-  await fs.rm(outDir, { recursive: true, force: true })
+  await rm(outDir, { recursive: true, force: true })
 
   process.chdir(pkg.dir)
   await Promise.all([
