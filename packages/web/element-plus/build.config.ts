@@ -1,3 +1,5 @@
 import { defineConfig } from '@element-plus-next/build/config'
 
-export default defineConfig({})
+export default defineConfig({
+  dts: false,
+})
