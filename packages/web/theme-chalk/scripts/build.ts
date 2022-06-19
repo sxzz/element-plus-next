@@ -9,6 +9,7 @@ import postcssPresetEnv from 'postcss-preset-env'
 import { build as esbuild } from 'esbuild'
 import { sassPlugin } from 'esbuild-sass-plugin'
 import CleanCSS from 'clean-css'
+import type { AcceptedPlugin } from 'postcss'
 
 const pathDist = path.resolve(__dirname, '..', 'dist')
 
@@ -29,7 +30,7 @@ async function build() {
         async transform(source, resolveDir, filePath) {
           const { css } = await postcss([
             autoprefixer,
-            postcssPresetEnv({ stage: 0 }),
+            postcssPresetEnv({ stage: 0 }) as AcceptedPlugin,
           ]).process(source, { from: undefined })
           const { styles, warnings, stats } = await new CleanCSS({
             returnPromise: true,

@@ -1,6 +1,11 @@
 {
   "extends": "@element-plus-next/tsconfig/tsconfig.node.json",
-  "include": ["packages/node/**/*", "packages/node/**/*.json"],
+  "include": [
+    "packages/node/**/*",
+    "packages/node/**/*.json",
+    "**/build.config.ts",
+    "**/scripts/**/*"
+  ],
   "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"],
   "compilerOptions": {
     "composite": true

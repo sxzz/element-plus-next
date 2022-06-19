@@ -49,15 +49,15 @@ importers:
       unplugin-vue: ^2.2.1
       vue: ^3.2.37
     dependencies:
+      '@element-plus-next/node-constants': link:../node-constants
+      '@element-plus-next/node-utils': link:../node-utils
+      '@element-plus-next/workspace': link:../workspace
       esbuild: 0.14.46
       local-pkg: 0.4.1
       tsup: /@sxzz/tsup/6.2.0
       unconfig: 0.3.4
       unplugin-vue: 2.2.1_esbuild@0.14.46+vue@3.2.37
     devDependencies:
-      '@element-plus-next/node-constants': link:../node-constants
-      '@element-plus-next/node-utils': link:../node-utils
-      '@element-plus-next/workspace': link:../workspace
       tsx: 3.4.3
       vue: 3.2.37
 
@@ -152,33 +152,35 @@ importers:
     specifiers:
       '@element-plus-next/node-utils': workspace:*
       '@types/clean-css': ^4.2.5
+      '@types/postcss-preset-env': ^6.7.3
       autoprefixer: ^10.4.4
       chalk: ^5.0.1
       clean-css: ^5.3.0
       consola: ^2.15.3
       esbuild: ^0.14.34
       esbuild-sass-plugin: ^2.2.6
-      esno: ^0.14.1
       fast-glob: ^3.2.11
       postcss: ^8.4.12
       postcss-preset-env: ^7.4.3
       rimraf: ^3.0.2
       sass: ^1.50.0
+      tsx: ^3.4.3
     devDependencies:
       '@element-plus-next/node-utils': link:../../node/node-utils
       '@types/clean-css': 4.2.5
+      '@types/postcss-preset-env': 6.7.3
       autoprefixer: 10.4.7_postcss@8.4.14
       chalk: 5.0.1
       clean-css: 5.3.0
       consola: 2.15.3
       esbuild: 0.14.46
       esbuild-sass-plugin: 2.2.6
-      esno: 0.14.1
       fast-glob: 3.2.11
       postcss: 8.4.14
       postcss-preset-env: 7.7.1_postcss@8.4.14
       rimraf: 3.0.2
       sass: 1.52.3
+      tsx: 3.4.3
 
   packages/web/utils:
     specifiers:
@@ -913,6 +915,20 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
+  /@types/autoprefixer/9.7.2:
+    resolution: {integrity: sha512-QX7U7YW3zX3ex6MECtWO9folTGsXeP4b8bSjTq3I1ODM+H+sFHwGKuof+T+qBcDClGlCGtDb3SVfiTVfmcxw4g==}
+    dependencies:
+      '@types/browserslist': 4.15.0
+      postcss: 7.0.39
+    dev: true
+
+  /@types/browserslist/4.15.0:
+    resolution: {integrity: sha512-h9LyKErRGZqMsHh9bd+FE8yCIal4S0DxKTOeui56VgVXqa66TKiuaIUxCAI7c1O0LjaUzOTcsMyOpO9GetozRA==}
+    deprecated: This is a stub types definition. browserslist provides its own type definitions, so you do not need this installed.
+    dependencies:
+      browserslist: 4.20.4
+    dev: true
+
   /@types/chai-subset/1.3.3:
     resolution: {integrity: sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==}
     dependencies:
@@ -978,6 +994,13 @@ packages:
 
   /@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
+    dev: true
+
+  /@types/postcss-preset-env/6.7.3:
+    resolution: {integrity: sha512-3YS66Cd7yNTOjjIPoOUaeGbcnxH+0eeP8Ih/RLpFEDazK16lOTabMqmHfL76DBNj5LreJlKRtKML07JkkuxRyw==}
+    dependencies:
+      '@types/autoprefixer': 9.7.2
+      postcss: 7.0.39
     dev: true
 
   /@types/tough-cookie/4.0.2:
@@ -1493,12 +1516,6 @@ packages:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
     dev: false
-
-  /builtins/4.1.0:
-    resolution: {integrity: sha512-1bPRZQtmKaO6h7qV1YHXNtr6nCK28k0Zo95KM4dXfILcZZwoHJBN1m3lfLv9LPkcOZlrSr+J1bzMaZFO98Yq0w==}
-    dependencies:
-      semver: 7.3.7
-    dev: true
 
   /bundle-require/3.0.4_esbuild@0.14.46:
     resolution: {integrity: sha512-VXG6epB1yrLAvWVQpl92qF347/UXmncQj7J3U8kZEbdVZ1ZkQyr4hYeL/9RvcE8vVVdp53dY78Fd/3pqfRqI1A==}
@@ -2201,12 +2218,6 @@ packages:
     requiresBuild: true
     optional: true
 
-  /esbuild-node-loader/0.6.5:
-    resolution: {integrity: sha512-uPP+dllWm38cFvDysdocutN3lfe5pTIbddAHp1ENyLzpHYqE2r+3Wo+pfg9X3p8DFWwzIisft5YkeBIthIcixw==}
-    dependencies:
-      esbuild: 0.14.46
-    dev: true
-
   /esbuild-openbsd-64/0.14.38:
     resolution: {integrity: sha512-CDswYr2PWPGEPpLDUO50mL3WO/07EMjnZDNKpmaxUPsrW+kVM3LoAqr/CE8UbzugpEiflYqJsGPLirThRB18IQ==}
     engines: {node: '>=12'}
@@ -2222,14 +2233,6 @@ packages:
     os: [openbsd]
     requiresBuild: true
     optional: true
-
-  /esbuild-register/3.3.3_esbuild@0.14.46:
-    resolution: {integrity: sha512-eFHOkutgIMJY5gc8LUp/7c+LLlDqzNi9T6AwCZ2WKKl3HmT+5ef3ZRyPPxDOynInML0fgaC50yszPKfPnjC0NQ==}
-    peerDependencies:
-      esbuild: '>=0.12 <1'
-    dependencies:
-      esbuild: 0.14.46
-    dev: true
 
   /esbuild-sass-plugin/2.2.6:
     resolution: {integrity: sha512-WVREJhOS6UlZNoS2FhkOA5980VVKjS6ocUK7YFghJt/94rWDNXxPI+XfkOKlSMbJF/n5wAotr37P8/9KhgkgPQ==}
@@ -2634,17 +2637,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /esno/0.14.1:
-    resolution: {integrity: sha512-yDFYw6dGUjCT1qKsdG7WOc/RzIh/qwxUEVZ+ohCltaxBxEFMNqeqbQL9xjRl6Yvdwrfc5OCjUA9JbFmuu/8BKg==}
-    hasBin: true
-    dependencies:
-      cross-spawn: 7.0.3
-      esbuild: 0.14.46
-      esbuild-node-loader: 0.6.5
-      esbuild-register: 3.3.3_esbuild@0.14.46
-      import-meta-resolve: 1.1.1
-    dev: true
-
   /espree/9.3.2:
     resolution: {integrity: sha512-D211tC7ZwouTIuY5x9XnS0E9sWNChB7IYKX/Xp5eQj3nFXhqmiUDB9q27y76oFl8jTg3pXcQx/bpxMfs3CIZbA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -3032,12 +3024,6 @@ packages:
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
-
-  /import-meta-resolve/1.1.1:
-    resolution: {integrity: sha512-JiTuIvVyPaUg11eTrNDx5bgQ/yMKMZffc7YSjvQeSMXy58DO2SQ8BtAf3xteZvmzvjYh14wnqNjL8XVeDy2o9A==}
-    dependencies:
-      builtins: 4.1.0
-    dev: true
 
   /imurmurhash/0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
@@ -3933,6 +3919,10 @@ packages:
     resolution: {integrity: sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==}
     dev: true
 
+  /picocolors/0.2.1:
+    resolution: {integrity: sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==}
+    dev: true
+
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -4306,6 +4296,14 @@ packages:
 
   /postcss-value-parser/4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+    dev: true
+
+  /postcss/7.0.39:
+    resolution: {integrity: sha512-yioayjNbHn6z1/Bywyb2Y4s3yvDAeXGOyxqD+LnVOinq6Mdmd++SW2wUNVzavyyHxd6+DxzWGIuosg6P1Rj8uA==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      picocolors: 0.2.1
+      source-map: 0.6.1
     dev: true
 
   /postcss/8.4.14:
