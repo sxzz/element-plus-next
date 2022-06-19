@@ -1,6 +1,8 @@
 {
   "cSpell.words": ["Element Plus", "element-plus"],
+  "typescript.tsdk": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
+  "npm.packageManager": "pnpm",
   "eslint.probe": [
     "javascript",
     "javascriptreact",
@@ -21,7 +23,11 @@
     "json",
     "jsonc"
   ],
+  "vite.devCommand": "pnpm run dev --",
+  "i18n-ally.localesPaths": "packages/locale/lang",
+  "i18n-ally.enabledParsers": ["ts"],
+  "i18n-ally.enabledFrameworks": ["vue", "vue-sfc"],
+  "i18n-ally.keystyle": "nested",
   "iconify.includes": ["ep"],
-  "npm.packageManager": "pnpm",
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "unocss.root": "./docs"
 }
