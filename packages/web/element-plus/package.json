@@ -36,7 +36,7 @@
     "clean": "rimraf ./dist"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.2.0"
   },
   "dependencies": {
     "@element-plus-next/constants": "workspace:*",
