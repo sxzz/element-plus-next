@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/triple-slash-reference */
+/// <reference path="../../env.d.ts" />
+
 // internal code, semver is not guaranteed.
 
 export * from './dom'

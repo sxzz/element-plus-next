@@ -33,7 +33,7 @@ export async function build(packageName?: string, userConfig?: BuildOptions) {
   }
 
   if (config.dts) {
-    options.dts = true
+    options.dts = {}
     options.tsconfig = resolveModule(
       `${PKG_PREFIX}/tsconfig/tsconfig.${config.platform}.json`
     )

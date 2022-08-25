@@ -35,7 +35,7 @@
   },
   "module": "./dist/index.js",
   "bin": {
-    "ep-cli": "./bin/ep-cli.js"
+    "ep-cli": "./bin/ep-cli.sh"
   },
   "scripts": {
     "build": "ep-cli build",
@@ -45,5 +45,8 @@
     "@element-plus-next/build": "workspace:*",
     "@element-plus-next/node-utils": "workspace:*",
     "commander": "^9.1.0"
+  },
+  "devDependencies": {
+    "tsx": "^3.4.3"
   }
 }

@@ -20,8 +20,6 @@ Element Plus 3. Exploring... 🧭
 ## Unresolved
 
 - Style Importing
-- Typing
-  - tsup dts
 
 ## Packages
 
