@@ -41,7 +41,7 @@
   "dependencies": {
     "@element-plus-next/constants": "workspace:*",
     "@element-plus-next/utils": "workspace:*",
-    "@element-plus/icons-vue": "^1.1.4",
+    "@element-plus/icons-vue": "^2.0.9",
     "@vue/shared": "^3.2.31",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",

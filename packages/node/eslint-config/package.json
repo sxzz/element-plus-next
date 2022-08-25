@@ -32,13 +32,13 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.2.1",
-    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-unicorn": "^42.0.0",
-    "eslint-plugin-vue": "^8.6.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "eslint-plugin-vue": "^9.4.0",
     "jsonc-eslint-parser": "^2.1.0",
     "prettier": "^2.6.2",
-    "yaml-eslint-parser": "^0.5.0"
+    "yaml-eslint-parser": "^1.1.0"
   },
   "devDependencies": {
     "eslint": "^8.13.0",
