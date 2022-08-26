@@ -28,13 +28,23 @@
   "exports": {
     ".": {
       "dev": "./src/index.ts",
+      "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
     "./config": {
       "dev": "./src/config.ts",
+      "require": "./dist/config.cjs",
       "import": "./dist/config.js"
     },
     "./*": "./*"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
   },
   "module": "./dist/index.js",
   "scripts": {

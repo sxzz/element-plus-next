@@ -7,7 +7,7 @@ case $(uname) in
 esac
 
 if [ -z ${EP_DEV+x} ]; then
-  /usr/bin/env node "$basedir/../dist/index.js" "$@"
+  /usr/bin/env node "$basedir/../run-published.js" "$@"
 else
   pnpm tsx -C dev "$basedir/../src/index.ts" "$@"
 fi

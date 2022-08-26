@@ -29,6 +29,7 @@
   "exports": {
     ".": {
       "dev": "./src/index.ts",
+      "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
     "./*": "./*"
@@ -38,7 +39,7 @@
     "ep-cli": "./bin/ep-cli.sh"
   },
   "scripts": {
-    "build": "ep-cli build",
+    "build": "./bin/ep-cli.sh build",
     "clean": "rimraf ./dist"
   },
   "dependencies": {
@@ -47,6 +48,7 @@
     "commander": "^9.1.0"
   },
   "devDependencies": {
+    "@element-plus-next/cli-published": "npm:@element-plus-next/cli@3.0.0-alpha.3",
     "tsx": "^3.4.3"
   }
 }

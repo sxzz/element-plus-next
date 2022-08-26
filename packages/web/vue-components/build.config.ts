@@ -1,4 +1,4 @@
-import { defineConfig } from '@element-plus-next/build/config'
+import { defineConfig } from '@element-plus-next/build-published/config'
 
 export default defineConfig({
   vue: true,

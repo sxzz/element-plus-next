@@ -24,7 +24,7 @@
     "typecheck:vitest": "vue-tsc -p tsconfig.vitest.json --composite false --noEmit"
   },
   "devDependencies": {
-    "@element-plus-next/build": "workspace:*",
+    "@element-plus-next/build-published": "npm:@element-plus-next/build@3.0.0-alpha.3",
     "@element-plus-next/cli": "workspace:*",
     "@element-plus-next/eslint-config": "workspace:*",
     "@element-plus-next/tsconfig": "workspace:*",

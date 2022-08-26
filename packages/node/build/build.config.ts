@@ -4,6 +4,5 @@ export default defineConfig({
   platform: 'node',
   tsup: {
     entry: ['src/index.ts', 'src/config.ts'],
-    format: ['esm'],
   },
 })
