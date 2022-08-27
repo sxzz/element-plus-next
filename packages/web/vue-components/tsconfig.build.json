@@ -1,6 +1,7 @@
 {
   "extends": "@element-plus-next/tsconfig/tsconfig.web.json",
   "include": ["src"],
+  "exclude": ["src/*/tests"],
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,

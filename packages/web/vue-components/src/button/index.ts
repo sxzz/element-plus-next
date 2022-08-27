@@ -1,5 +1,5 @@
-import Button from './button.vue'
+import Button from './src/button.vue'
 
 export const ElButton = Button
 
-export * from './button'
+export * from './src/button'
