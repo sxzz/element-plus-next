@@ -1,5 +1,7 @@
+/// <reference types="unplugin-vue-define-options/macros-global" />
+
 import type { vShow } from 'vue'
-import type { APP_INSTALLED_KEY } from '@element-plus-next/constants'
+import type { INSTALLED_KEY } from '@element-plus-next/constants'
 
 declare global {
   const process: {
@@ -18,7 +20,7 @@ declare global {
 
 declare module '@vue/runtime-core' {
   export interface App {
-    [APP_INSTALLED_KEY]?: boolean
+    [INSTALLED_KEY]?: boolean
   }
 
   export interface GlobalComponents {
