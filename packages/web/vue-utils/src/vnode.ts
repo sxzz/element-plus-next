@@ -8,10 +8,17 @@ import {
   isVNode,
   openBlock,
 } from 'vue'
-import { debugWarn, hasOwn } from '@element-plus-next/utils'
-import type { VNode, VNodeChild, VNodeNormalizedChildren } from 'vue'
+import { debugWarn, hasOwn, isArray } from '@element-plus-next/utils'
+import type {
+  VNode,
+  VNodeArrayChildren,
+  VNodeChild,
+  VNodeNormalizedChildren,
+} from 'vue'
 
-const SCOPE = 'utils/vue/vnode'
+const SCOPE = '@element-plus-next/vue-utils/vnode'
+
+export { isVNode } from 'vue'
 
 export enum PatchFlags {
   TEXT = 1,
@@ -125,4 +132,9 @@ export const getNormalizedProps = (node: VNode) => {
   return props
 }
 
-export { isVNode } from 'vue'
+export const ensureOnlyChild = (children: VNodeArrayChildren | undefined) => {
+  if (!isArray(children) || children.length > 1) {
+    throw new Error('expect to receive a single Vue element child')
+  }
+  return children[0]
+}
