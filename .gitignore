@@ -1,8 +1,17 @@
+# Editor directories and files
+.idea
+
+# Package Manager
 node_modules
+.pnpm-debug.log*
+
+# System
+.DS_Store
+
+# Bundle
 dist
 coverage
 
-.idea
-.DS_Store
-.pnpm-debug.log*
+# local env files
 *.local
+tmp
