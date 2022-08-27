@@ -1,3 +1,4 @@
-export const EVENT_UPDATE_MODEL = 'update:modelValue'
-export const EVENT_CHANGE = 'change'
-export const EVENT_INPUT = 'input'
+// v3 TODO: rename EVENT as prefix
+export const UPDATE_MODEL_EVENT = 'update:modelValue'
+export const CHANGE_EVENT = 'change'
+export const INPUT_EVENT = 'input'

@@ -2,24 +2,14 @@
 
 Element Plus 3. Exploring... 🧭
 
+Target commit: fe26526c14f11190bae0746f594770d555b04ea2
+
 ## Features
 
 - 🔥 Real Monorepo - pnpm
   - Separate each package
 - ⚡️ Super fast! - [ESBuild](https://esbuild.github.io/) / [tsup](https://github.com/egoist/tsup)
 - ⛔️ Stricter TypeScript type check
-
-## Plan
-
-- Move to real monorepo.
-  - [#5707](https://github.com/element-plus/element-plus/issues/5707)
-  - [#5706](https://github.com/element-plus/element-plus/issues/5706)
-- Fix ALL TypeScript errors.
-  - [#6114](https://github.com/element-plus/element-plus/issues/6114)
-
-## Unresolved
-
-- Style Importing
 
 ## Packages
 
