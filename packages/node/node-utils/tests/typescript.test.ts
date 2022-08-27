@@ -3,8 +3,8 @@
  */
 
 import fs from 'fs'
-import { describe, it, expect, vi } from 'vitest'
-import { getTsConfigPaths, getTsConfig } from '../src'
+import { describe, expect, it, vi } from 'vitest'
+import { getTsConfig, getTsConfigPaths } from '../src'
 
 describe('typescript', () => {
   it('getTsConfigPaths should work', async () => {

@@ -2,7 +2,7 @@
   "name": "@element-plus-next/workspace",
   "version": "3.0.0-alpha.4",
   "description": "workspace manager for Element Plus.",
-  "homepage": "https://element-plus.org/",
+  "type": "module",
   "keywords": [
     "element-plus",
     "element",
@@ -10,18 +10,15 @@
     "ui framework",
     "tsconfig"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/element-plus/element-plus.git"
-  },
+  "homepage": "https://element-plus.org/",
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "type": "module",
+  "license": "MIT",
   "files": [
     "dist"
   ],
+  "module": "./dist/index.js",
   "exports": {
     ".": {
       "dev": "./src/index.ts",
@@ -30,7 +27,10 @@
     },
     "./*": "./*"
   },
-  "module": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/element-plus.git"
+  },
   "scripts": {
     "build": "ep-cli build",
     "clean": "rimraf ./dist"

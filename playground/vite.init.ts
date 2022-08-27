@@ -1,5 +1,5 @@
 import { existsSync } from 'fs'
-import { writeFile, readFile } from 'fs/promises'
+import { readFile, writeFile } from 'fs/promises'
 
 const app = 'src/App.vue'
 const example = 'app.example.vue'

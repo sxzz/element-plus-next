@@ -3,12 +3,12 @@
  */
 
 import path from 'path'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import {
-  getWorkspaceRoot,
-  getWorkspacePackages,
   getDependencies,
   getPackage,
+  getWorkspacePackages,
+  getWorkspaceRoot,
 } from '../src'
 
 describe('workspace', () => {

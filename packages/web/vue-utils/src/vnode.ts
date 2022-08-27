@@ -1,14 +1,14 @@
 import {
+  Comment,
   Fragment,
   Text,
-  Comment,
+  camelize,
   createBlock,
-  openBlock,
   createCommentVNode,
   isVNode,
-  camelize,
+  openBlock,
 } from 'vue'
-import { hasOwn, debugWarn } from '@element-plus-next/utils'
+import { debugWarn, hasOwn } from '@element-plus-next/utils'
 import type { VNode, VNodeChild, VNodeNormalizedChildren } from 'vue'
 
 const SCOPE = 'utils/vue/vnode'

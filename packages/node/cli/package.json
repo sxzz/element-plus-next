@@ -2,7 +2,7 @@
   "name": "@element-plus-next/cli",
   "version": "3.0.0-alpha.4",
   "description": "CLI for Element Plus.",
-  "homepage": "https://element-plus.org/",
+  "type": "module",
   "keywords": [
     "element-plus",
     "element",
@@ -13,19 +13,16 @@
     "build",
     "cli"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/element-plus/element-plus.git"
-  },
+  "homepage": "https://element-plus.org/",
   "bugs": {
     "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "type": "module",
+  "license": "MIT",
   "files": [
     "dist",
     "bin"
   ],
+  "module": "./dist/index.js",
   "exports": {
     ".": {
       "dev": "./src/index.ts",
@@ -34,9 +31,12 @@
     },
     "./*": "./*"
   },
-  "module": "./dist/index.js",
   "bin": {
     "ep-cli": "./bin/ep-cli.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/element-plus.git"
   },
   "scripts": {
     "build": "./bin/ep-cli.sh build",

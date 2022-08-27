@@ -2,7 +2,6 @@
   "name": "@element-plus-next/eslint-config",
   "version": "3.0.0-alpha.4",
   "description": "ESLint config for Element Plus.",
-  "homepage": "https://element-plus.org/",
   "keywords": [
     "element-plus",
     "element",
@@ -12,15 +11,16 @@
     "vue",
     "eslint-config"
   ],
+  "homepage": "https://element-plus.org/",
+  "bugs": {
+    "url": "https://github.com/element-plus/element-plus/issues"
+  },
   "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/element-plus/element-plus.git"
   },
-  "bugs": {
-    "url": "https://github.com/element-plus/element-plus/issues"
-  },
-  "main": "index.js",
   "peerDependencies": {
     "eslint": "^8.0.0"
   },

@@ -2,7 +2,7 @@
   "name": "@element-plus-next/theme-chalk",
   "version": "3.0.0-alpha.4",
   "description": "Theme chalk for Element Plus.",
-  "homepage": "https://element-plus.org/",
+  "type": "module",
   "keywords": [
     "element-plus",
     "element",
@@ -12,18 +12,18 @@
     "vue",
     "theme-chalk"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/element-plus/element-plus.git"
+  "homepage": "https://element-plus.org/",
+  "bugs": {
+    "url": "https://github.com/element-plus/element-plus/issues"
   },
-  "type": "module",
+  "license": "MIT",
   "files": [
     "dist",
     "src"
   ],
-  "bugs": {
-    "url": "https://github.com/element-plus/element-plus/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/element-plus/element-plus.git"
   },
   "scripts": {
     "build": "tsx scripts/build.ts",

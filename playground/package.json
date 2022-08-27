@@ -1,9 +1,9 @@
 {
-  "private": true,
   "name": "@element-plus-next/playground",
   "version": "3.0.0-alpha.1",
+  "private": true,
   "description": "Playground for Element Plus.",
-  "homepage": "https://element-plus.org/",
+  "type": "module",
   "keywords": [
     "element-plus",
     "element",
@@ -11,15 +11,15 @@
     "ui framework",
     "playground"
   ],
+  "homepage": "https://element-plus.org/",
+  "bugs": {
+    "url": "https://github.com/element-plus/element-plus/issues"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/element-plus/element-plus.git"
   },
-  "bugs": {
-    "url": "https://github.com/element-plus/element-plus/issues"
-  },
-  "type": "module",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",

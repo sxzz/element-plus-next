@@ -1,4 +1,4 @@
-import { isString, isNumber, debugWarn } from '@element-plus-next/utils'
+import { debugWarn, isNumber, isString } from '@element-plus-next/utils'
 
 const SCOPE = 'utils/vue/style'
 

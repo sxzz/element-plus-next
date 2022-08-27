@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { castArray as lodashCastArray } from 'lodash-es'
-import { castArray, ensureArray, unique, tuple } from '../src'
+import { castArray, ensureArray, tuple, unique } from '../src'
 
 describe('arrays', () => {
   it('tuple should work', () => {

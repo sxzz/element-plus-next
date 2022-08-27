@@ -3,7 +3,7 @@ import { components } from './components'
 import type { Plugin } from 'vue'
 
 export const makeInstaller = (components: Plugin[] = []): Plugin => {
-  const install: Plugin['install'] = (app, options) => {
+  const install: Plugin['install'] = (app) => {
     if (app[APP_INSTALLED_KEY]) return
     app[APP_INSTALLED_KEY] = true
 

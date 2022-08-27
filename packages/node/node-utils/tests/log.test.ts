@@ -2,7 +2,7 @@
  * @vitest-environment node
  */
 
-import { describe, it, expect, vi, afterAll } from 'vitest'
+import { afterAll, describe, expect, it, vi } from 'vitest'
 import consola from 'consola'
 import { errorAndExit } from '../src'
 

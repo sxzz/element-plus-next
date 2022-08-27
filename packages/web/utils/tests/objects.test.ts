@@ -1,6 +1,6 @@
 import * as vueShared from '@vue/shared'
 import { describe, expect, it } from 'vitest'
-import { keysOf, entriesOf, getProp, hasOwn } from '../src'
+import { entriesOf, getProp, hasOwn, keysOf } from '../src'
 
 const AXIOM = 'Rem is the best girl'
 

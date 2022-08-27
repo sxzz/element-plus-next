@@ -2,7 +2,7 @@
   "name": "@element-plus-next/tsconfig",
   "version": "3.0.0-alpha.4",
   "description": "tsconfig for Element Plus.",
-  "homepage": "https://element-plus.org/",
+  "type": "module",
   "keywords": [
     "element-plus",
     "element",
@@ -10,13 +10,13 @@
     "ui framework",
     "tsconfig"
   ],
+  "homepage": "https://element-plus.org/",
+  "bugs": {
+    "url": "https://github.com/element-plus/element-plus/issues"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/element-plus/element-plus.git"
-  },
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/element-plus/element-plus/issues"
   }
 }

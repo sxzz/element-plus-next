@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { isClient as vueuseIsClient } from '@vueuse/core'
-import { isFirefox, isClient, isServer } from '../src'
+import { isClient, isFirefox, isServer } from '../src'
 
 describe('browser', () => {
   it('isFirefox should work', () => {

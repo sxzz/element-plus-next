@@ -5,9 +5,9 @@ import Vue from 'unplugin-vue/esbuild'
 import { resolveModule } from 'local-pkg'
 import { getPackage } from '@element-plus-next/workspace'
 import {
+  PKG_PREFIX,
   targetNode,
   targetWeb,
-  PKG_PREFIX,
 } from '@element-plus-next/node-constants'
 import { importConfig } from './utils'
 import type { BuildOptions } from './config'
