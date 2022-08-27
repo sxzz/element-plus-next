@@ -39,11 +39,6 @@ export async function build(packageName?: string, userConfig?: BuildOptions) {
     )
   }
 
-  let filename = '[name]'
-  if (config.tsup.entry.length <= 1) {
-    filename = config.name
-  }
-
   await rm(outDir, { recursive: true, force: true })
 
   process.chdir(pkg.dir)
@@ -54,7 +49,7 @@ export async function build(packageName?: string, userConfig?: BuildOptions) {
         ...options,
         name: 'ep-cli-tsup',
         esbuildOptions(options) {
-          options.entryNames = `[dir]/${filename}`
+          options.entryNames = `[dir]/[name]`
         },
       })
     )
@@ -66,7 +61,7 @@ export async function build(packageName?: string, userConfig?: BuildOptions) {
         name: 'ep-cli-tsup-minify',
         minify: true,
         esbuildOptions(options) {
-          options.entryNames = `[dir]/${filename}.min`
+          options.entryNames = `[dir]/[name].min`
         },
       })
     )
