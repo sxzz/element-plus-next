@@ -1,14 +1,15 @@
 {
-  "name": "@element-plus-next/locale",
+  "name": "@element-plus-next/vue-hooks",
   "version": "3.0.0-alpha.4",
-  "description": "Locale for Element Plus.",
+  "description": "Vue hooks for Element Plus.",
   "keywords": [
     "element-plus",
     "element",
     "component library",
     "ui framework",
     "ui",
-    "locale"
+    "vue",
+    "hooks"
   ],
   "homepage": "https://element-plus.org/",
   "bugs": {
@@ -23,20 +24,7 @@
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     },
-    "./lang/*": {
-      "dev": "./src/lang/*.ts",
-      "require": "./dist/lang/*.js",
-      "import": "./dist/lang/*.mjs"
-    },
     "./*": "./*"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./*"
-      ]
-    }
   },
   "repository": {
     "type": "git",
@@ -47,6 +35,23 @@
     "build": "ep-cli build",
     "clean": "rimraf ./dist"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@element-plus-next/constants": "workspace:*",
+    "@element-plus-next/locale": "workspace:*",
+    "@element-plus-next/utils": "workspace:*",
+    "@element-plus-next/vue-context": "workspace:*",
+    "@floating-ui/dom": "^1.0.1",
+    "@vueuse/core": "^9.1.1",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-unified": "^1.0.2",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "vue": "^3.2.31"
+  }
 }

@@ -20,7 +20,8 @@
     "paths": {
       "element-plus-next": ["packages/web/element-plus/src/index"],
       "@element-plus-next/build/config": ["packages/node/build/src/config.ts"],
-      "@element-plus-next/*": ["packages/web/*/src", "packages/node/*/src"]
+      "@element-plus-next/*": ["packages/web/*/src", "packages/node/*/src"],
+      "@element-plus-next/locale/lang/*": ["packages/web/locale/src/lang/*.ts"]
     }
   }
 }
