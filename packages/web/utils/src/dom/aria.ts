@@ -1,5 +1,3 @@
-import type { Nullable } from '../typings'
-
 const FOCUSABLE_ELEMENT_SELECTORS = `a[href],button:not([disabled]),button:not([hidden]),:not([tabindex="-1"]),input:not([disabled]),input:not([type="hidden"]),select:not([disabled]),textarea:not([disabled])`
 
 /**
@@ -113,7 +111,7 @@ export const getSibling = (
   el: HTMLElement,
   distance: number,
   elClass: string
-): Nullable<Element> => {
+) => {
   const { parentNode } = el
   if (!parentNode) return null
   const siblings = parentNode.querySelectorAll(elClass)

@@ -1,6 +1,9 @@
-import { isObject } from '../types'
+import { isNumber, isObject, isString } from '../types'
 import { entriesOf, keysOf } from '../objects'
 import { isServer } from '../browser'
+import { debugWarn } from '../error'
+
+const SCOPE = '@element-plus-next/utils/dom/style'
 
 export const classNameToArray = (cls = '') =>
   cls.split(' ').filter((item) => !!item.trim())
@@ -75,4 +78,14 @@ export const removeStyle = (
   } else {
     setStyle(element, style, '')
   }
+}
+
+export function addUnit(value?: string | number, defaultUnit = 'px') {
+  if (!value) return ''
+  if (isString(value)) {
+    return value
+  } else if (isNumber(value)) {
+    return `${value}${defaultUnit}`
+  }
+  debugWarn(SCOPE, 'binding value must be a string or number')
 }

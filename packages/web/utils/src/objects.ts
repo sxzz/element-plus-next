@@ -1,6 +1,6 @@
 import { get, set } from 'lodash-unified'
 import type { Entries } from 'type-fest'
-import type { Arrayable } from './typings'
+import type { Arrayable } from './typescript'
 
 export const keysOf = <T>(arr: T) => Object.keys(arr) as Array<keyof T>
 export const entriesOf = <T>(arr: T) => Object.entries(arr) as Entries<T>
