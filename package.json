@@ -15,7 +15,7 @@
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 && pretty-quick --check --branch dev",
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json && pretty-quick --branch dev",
     "release": "bumpp package.json \"packages/*/*/package.json\"",
-    "publish": "pnpm publish -r",
+    "publish": "pnpm publish -r --access public",
     "typecheck": "run-p typecheck:*",
     "typecheck:web": "vue-tsc -p tsconfig.web.json --composite false --noEmit",
     "typecheck:playground": "vue-tsc -p tsconfig.playground.json --composite false --noEmit",
