@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { isArray } from '@vue/shared'
+import { isArray } from '@element-plus-next/utils'
 
 import type { Option, OptionGroup } from './select.types'
 

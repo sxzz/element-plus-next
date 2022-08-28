@@ -7,16 +7,16 @@ import {
   toRaw,
   watch,
 } from 'vue'
-import { toTypeString } from '@vue/shared'
-import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
-import { useSize, useSizeProp } from '@element-plus-next/vue-hooks'
 import {
   debugWarn,
   isArray,
   isBoolean,
   isNumber,
   isString,
+  toTypeString,
 } from '@element-plus-next/utils'
+import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
+import { useSize, useSizeProp } from '@element-plus-next/vue-hooks'
 import { useFormItem, useFormItemInputId } from '../../form'
 
 import type { ComponentInternalInstance, ExtractPropTypes, PropType } from 'vue'

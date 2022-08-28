@@ -9,6 +9,8 @@ export {
   isDate,
   isPromise,
   isSymbol,
+  toTypeString,
+  toRawType,
 } from '@vue/shared'
 export { isBoolean, isNumber } from '@vueuse/shared'
 

@@ -1,4 +1,4 @@
-import { isString } from '@vue/shared'
+import { isString } from '@element-plus-next/utils'
 import { mutable } from '@element-plus-next/utils'
 import {
   buildProps,

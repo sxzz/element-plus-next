@@ -4,5 +4,8 @@
     "lib": ["ES2019", "DOM"],
     "jsx": "preserve",
     "declaration": true
+  },
+  "vueCompilerOptions": {
+    "target": 3
   }
 }

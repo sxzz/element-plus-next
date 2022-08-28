@@ -1,8 +1,3 @@
-// fix TS2742 https://github.com/microsoft/TypeScript/issues/42873#issuecomment-1193972441
-import type {} from '@vue/runtime-dom'
-import type {} from 'vue-demi'
-import type {} from '@vue/shared'
-
 export * from './affix'
 export * from './alert'
 export * from './autocomplete'

@@ -7,13 +7,12 @@ import {
   inject,
   withDirectives,
 } from 'vue'
-import { NOOP, isObject } from '@vue/shared'
+import { NOOP, debugWarn, isObject } from '@element-plus-next/utils'
 import {
   FORWARD_REF_INJECTION_KEY,
   useForwardRefDirective,
   useNamespace,
 } from '@element-plus-next/vue-hooks'
-import { debugWarn } from '@element-plus-next/utils'
 
 import type { Ref, VNode } from 'vue'
 

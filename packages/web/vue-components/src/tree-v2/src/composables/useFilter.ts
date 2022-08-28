@@ -1,5 +1,5 @@
 import { computed, ref } from 'vue'
-import { isFunction } from '@vue/shared'
+import { isFunction } from '@element-plus-next/utils'
 import type { Ref } from 'vue'
 import type { Tree, TreeKey, TreeNode, TreeProps } from '../types'
 

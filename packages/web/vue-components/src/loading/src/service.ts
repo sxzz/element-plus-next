@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { nextTick } from 'vue'
-import { isString } from '@vue/shared'
+import { isString } from '@element-plus-next/utils'
 import { isClient } from '@vueuse/core'
 import { addClass, getStyle, removeClass } from '@element-plus-next/utils'
 import { useNamespace, useZIndex } from '@element-plus-next/vue-hooks'

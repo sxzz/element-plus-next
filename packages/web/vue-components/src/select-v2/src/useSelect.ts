@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { computed, nextTick, onMounted, reactive, ref, watch } from 'vue'
-import { isArray, isFunction, isObject } from '@vue/shared'
+import { isArray, isFunction, isObject } from '@element-plus-next/utils'
 import { get, isEqual, debounce as lodashDebounce } from 'lodash-unified'
 import { useResizeObserver } from '@vueuse/core'
 import { ArrowUp } from '@element-plus/icons-vue'

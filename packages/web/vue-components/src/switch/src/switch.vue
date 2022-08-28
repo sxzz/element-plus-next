@@ -91,7 +91,7 @@ import {
   ref,
   watch,
 } from 'vue'
-import { isPromise } from '@vue/shared'
+import { isPromise } from '@element-plus-next/utils'
 import { Loading } from '@element-plus/icons-vue'
 import {
   addUnit,

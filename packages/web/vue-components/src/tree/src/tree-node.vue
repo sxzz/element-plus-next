@@ -92,7 +92,7 @@ import {
   ref,
   watch,
 } from 'vue'
-import { isFunction, isString } from '@vue/shared'
+import { isFunction, isString } from '@element-plus-next/utils'
 import { CaretRight, Loading } from '@element-plus/icons-vue'
 import { debugWarn } from '@element-plus-next/utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'

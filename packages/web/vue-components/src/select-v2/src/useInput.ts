@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { ref } from 'vue'
-import { isFunction } from '@vue/shared'
+import { isFunction } from '@element-plus-next/utils'
 import { isKorean } from '@element-plus-next/utils'
 
 export function useInput(handleInput: (event: InputEvent) => void) {

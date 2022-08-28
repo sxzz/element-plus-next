@@ -195,19 +195,18 @@
 <script lang="ts">
 // @ts-nocheck
 import { computed, defineComponent, nextTick, onMounted, ref, watch } from 'vue'
-import { isPromise } from '@vue/shared'
 import { debounce } from 'lodash-unified'
-
 import { isClient, useResizeObserver } from '@vueuse/core'
 import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
-import { ClickOutside as Clickoutside } from '@element-plus-next/vue-directives'
-import { useLocale, useNamespace, useSize } from '@element-plus-next/vue-hooks'
 import {
   debugWarn,
   focusNode,
   getSibling,
   isKorean,
+  isPromise,
 } from '@element-plus-next/utils'
+import { ClickOutside as Clickoutside } from '@element-plus-next/vue-directives'
+import { useLocale, useNamespace, useSize } from '@element-plus-next/vue-hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,

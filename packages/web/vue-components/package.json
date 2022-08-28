@@ -34,7 +34,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:lib": "ep-cli build",
-    "build:types": "pnpm vue-tsc -p tsconfig.json",
+    "build:types": "pnpm vue-tsc -p tsconfig.build.json",
     "clean": "rimraf ./dist"
   },
   "peerDependencies": {
@@ -67,11 +67,9 @@
   },
   "devDependencies": {
     "@vue/runtime-dom": "^3.2.37",
-    "@vue/shared": "^3.2.31",
     "@vue/test-utils": "^2.0.2",
     "typescript": "^4.7.4",
     "vue": "^3.2.31",
-    "vue-demi": "^0.13.11",
     "vue-tsc": "^0.40.1"
   }
 }
