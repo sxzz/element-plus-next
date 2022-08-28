@@ -65,7 +65,6 @@ import { ArrowDown, ArrowUp, Minus, Plus } from '@element-plus/icons-vue'
 import { RepeatClick as vRepeatClick } from '@element-plus-next/vue-directives'
 import {
   useDisabled,
-  useFormItem,
   useLocale,
   useNamespace,
   useSize,
@@ -78,6 +77,7 @@ import {
 } from '@element-plus-next/utils'
 import { ElInput } from '../../input'
 import { ElIcon } from '../../icon'
+import { useFormItem } from '../../form'
 import { inputNumberEmits, inputNumberProps } from './input-number'
 import type { InputInstance } from '../../input'
 

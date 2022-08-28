@@ -1,6 +1,6 @@
 import { computed, inject, unref } from 'vue'
 import { debugWarn, isClient } from '@element-plus-next/utils'
-import { useGlobalConfig } from '../use-global-config'
+import { useGlobalConfig } from '@element-plus-next/vue-context'
 import { defaultNamespace } from '../use-namespace'
 
 import type { InjectionKey, Ref } from 'vue'

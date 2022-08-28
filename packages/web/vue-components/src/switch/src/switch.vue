@@ -107,13 +107,13 @@ import {
 import {
   useDeprecated,
   useDisabled,
-  useFormItem,
-  useFormItemInputId,
   useNamespace,
   useSize,
 } from '@element-plus-next/vue-hooks'
 import ElIcon from '../../icon'
+import { useFormItem, useFormItemInputId } from '../../form'
 import { switchEmits, switchProps } from './switch'
+
 import type { CSSProperties } from 'vue'
 
 const COMPONENT_NAME = 'ElSwitch'

@@ -24,9 +24,9 @@ import {
   watch,
 } from 'vue'
 import { eagerComputed } from '@vueuse/core'
-import { tabsRootContextKey } from '@element-plus-next/vue-context'
 import { throwError } from '@element-plus-next/utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'
+import { tabsRootContextKey } from './tabs'
 import { tabPaneProps } from './tab-pane'
 
 const COMPONENT_NAME = 'ElTabPane'

@@ -28,7 +28,8 @@
 // @ts-nocheck
 import { computed, defineComponent, inject } from 'vue'
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { composeEventHandlers, composeRefs } from '@element-plus-next/utils'
+import { composeEventHandlers } from '@element-plus-next/utils'
+import { composeRefs } from '@element-plus-next/vue-utils'
 import { EVENT_CODE } from '@element-plus-next/constants'
 import {
   ROVING_FOCUS_GROUP_ITEM_INJECTION_KEY,

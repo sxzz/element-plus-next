@@ -1,5 +1,5 @@
 import { computed, unref } from 'vue'
-import { useGlobalConfig } from '../use-global-config'
+import { useGlobalConfig } from '@element-plus-next/vue-context'
 
 export const defaultNamespace = 'el'
 const statePrefix = 'is-'

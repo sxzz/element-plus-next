@@ -10,10 +10,9 @@
 <script setup lang="ts">
 import { inject, onBeforeUnmount, watch } from 'vue'
 import { composeEventHandlers } from '@element-plus-next/utils'
-import { tooltipV2RootKey } from '@element-plus-next/vue-context'
+import { tooltipV2CommonProps, tooltipV2RootKey } from './common'
 import ForwardRef from './forward-ref'
 import { tooltipV2TriggerProps } from './trigger'
-import { tooltipV2CommonProps } from './common'
 
 defineOptions({
   name: 'ElTooltipV2Trigger',

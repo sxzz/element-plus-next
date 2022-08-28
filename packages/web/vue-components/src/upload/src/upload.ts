@@ -4,7 +4,7 @@ import { ajaxUpload } from './ajax'
 
 import type { UploadAjaxError } from './ajax'
 import type { Awaitable } from '@element-plus-next/utils'
-import type { ExtractPropTypes } from 'vue'
+import type { ComputedRef, ExtractPropTypes, InjectionKey } from 'vue'
 import type Upload from './upload.vue'
 
 export const uploadListTypes = ['text', 'picture', 'picture-card'] as const
@@ -182,3 +182,10 @@ export const uploadProps = buildProps({
 export type UploadProps = ExtractPropTypes<typeof uploadProps>
 
 export type UploadInstance = InstanceType<typeof Upload>
+
+export interface UploadContext {
+  accept: ComputedRef<string>
+}
+
+export const uploadContextKey: InjectionKey<UploadContext> =
+  Symbol('uploadContextKey')

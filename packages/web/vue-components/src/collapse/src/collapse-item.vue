@@ -54,9 +54,9 @@ import { computed, inject, ref } from 'vue'
 import { ArrowRight } from '@element-plus/icons-vue'
 import { generateId } from '@element-plus-next/utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { collapseContextKey } from '@element-plus-next/vue-context'
 import ElCollapseTransition from '../../collapse-transition'
 import ElIcon from '../../icon'
+import { collapseContextKey } from './collapse'
 import { collapseItemProps } from './collapse-item'
 
 defineOptions({

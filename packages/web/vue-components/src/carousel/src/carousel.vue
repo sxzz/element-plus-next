@@ -78,10 +78,9 @@ import { useResizeObserver } from '@vueuse/core'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
 import { debugWarn, isString } from '@element-plus-next/utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { carouselContextKey } from '@element-plus-next/vue-context'
 import { ElIcon } from '../../icon'
-import { carouselEmits, carouselProps } from './carousel'
-import type { CarouselItemContext } from '@element-plus-next/vue-context'
+import { carouselContextKey, carouselEmits, carouselProps } from './carousel'
+import type { CarouselItemContext } from './carousel-item'
 
 defineOptions({
   name: 'ElCarousel',

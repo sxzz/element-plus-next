@@ -1,5 +1,5 @@
 import { buildProps, definePropType } from '@element-plus-next/vue-utils'
-import type { Measurable } from '@element-plus-next/vue-context'
+import type { Measurable } from './context'
 
 export const usePopperTriggerProps = buildProps({
   virtualRef: {

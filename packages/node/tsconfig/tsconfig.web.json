@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "lib": ["ES2019", "DOM"],
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "declaration": true
   }
 }

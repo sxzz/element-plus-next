@@ -19,9 +19,9 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, inject, ref, toRefs } from 'vue'
-import { breadcrumbKey } from '@element-plus-next/vue-context'
 import { useNamespace } from '@element-plus-next/vue-hooks'
 import { ElIcon } from '../../icon'
+import { breadcrumbContextKey } from './breadcrumb'
 import { breadcrumbItemProps } from './breadcrumb-item'
 
 import type { Router } from 'vue-router'
@@ -33,7 +33,7 @@ defineOptions({
 const props = defineProps(breadcrumbItemProps)
 
 const instance = getCurrentInstance()!
-const breadcrumbContext = inject(breadcrumbKey, undefined)!
+const breadcrumbContext = inject(breadcrumbContextKey, undefined)!
 const ns = useNamespace('breadcrumb')
 
 const { separator, separatorIcon } = toRefs(breadcrumbContext)

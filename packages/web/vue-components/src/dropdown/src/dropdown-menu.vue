@@ -17,7 +17,8 @@
 <script lang="ts">
 // @ts-nocheck
 import { computed, defineComponent, inject, unref } from 'vue'
-import { composeEventHandlers, composeRefs } from '@element-plus-next/utils'
+import { composeEventHandlers } from '@element-plus-next/utils'
+import { composeRefs } from '@element-plus-next/vue-utils'
 import { EVENT_CODE } from '@element-plus-next/constants'
 import { useNamespace } from '@element-plus-next/vue-hooks'
 import { FOCUS_TRAP_INJECTION_KEY } from '../../focus-trap'

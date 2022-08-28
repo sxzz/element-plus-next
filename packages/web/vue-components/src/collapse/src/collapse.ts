@@ -1,7 +1,7 @@
 import { isNumber, isString, mutable } from '@element-plus-next/utils'
 import { buildProps, definePropType } from '@element-plus-next/vue-utils'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, InjectionKey, Ref } from 'vue'
 import type Collapse from './collapse.vue'
 import type { Arrayable } from '@element-plus-next/utils'
 
@@ -27,3 +27,11 @@ export const collapseEmits = {
 export type CollapseEmits = typeof collapseEmits
 
 export type CollapseInstance = InstanceType<typeof Collapse>
+
+export interface CollapseContext {
+  activeNames: Ref<CollapseActiveName[]>
+  handleItemClick: (name: CollapseActiveName) => void
+}
+
+export const collapseContextKey: InjectionKey<CollapseContext> =
+  Symbol('collapseContextKey')

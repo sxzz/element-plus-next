@@ -109,15 +109,10 @@
 
 <script lang="ts" setup>
 import { computed, provide, reactive, toRefs } from 'vue'
-import {
-  useFormItemInputId,
-  useLocale,
-  useNamespace,
-  useSize,
-} from '@element-plus-next/vue-hooks'
-import { sliderContextKey } from '@element-plus-next/vue-context'
+import { useLocale, useNamespace, useSize } from '@element-plus-next/vue-hooks'
 import ElInputNumber from '../../input-number'
-import { sliderEmits, sliderProps } from './slider'
+import { useFormItemInputId } from '../../form'
+import { sliderContextKey, sliderEmits, sliderProps } from './slider'
 import SliderButton from './button.vue'
 import SliderMarker from './marker'
 import {

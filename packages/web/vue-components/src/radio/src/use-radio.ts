@@ -1,7 +1,7 @@
 import { computed, inject, ref } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
-import { radioGroupKey } from '@element-plus-next/vue-context'
 import { useDisabled, useSize } from '@element-plus-next/vue-hooks'
+import { radioGroupKey } from './radio'
 import type { SetupContext } from 'vue'
 import type { RadioEmits, RadioProps } from './radio'
 

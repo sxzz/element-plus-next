@@ -9,13 +9,13 @@ import dayOfYear from 'dayjs/plugin/dayOfYear.js'
 import isSameOrAfter from 'dayjs/plugin/isSameOrAfter.js'
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore.js'
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { ROOT_PICKER_INJECTION_KEY } from '@element-plus-next/vue-context'
 import {
   CommonPicker,
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_DATEPICKER,
   timePickerDefaultProps,
 } from '../../time-picker'
+import { ROOT_PICKER_INJECTION_KEY } from './context'
 
 import { datePickerProps } from './props/date-picker'
 import { getPanel } from './panel-utils'

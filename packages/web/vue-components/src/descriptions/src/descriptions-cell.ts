@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { defineComponent, h, inject } from 'vue'
-import { addUnit, getNormalizedProps } from '@element-plus-next/utils'
+import { addUnit } from '@element-plus-next/utils'
+import { getNormalizedProps } from '@element-plus-next/vue-utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'
 import { descriptionsKey } from './token'
 

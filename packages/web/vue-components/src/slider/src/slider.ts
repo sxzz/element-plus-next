@@ -8,7 +8,13 @@ import {
 } from '@element-plus-next/constants'
 import { useSizeProp } from '@element-plus-next/vue-hooks'
 import type { Arrayable } from '@element-plus-next/utils'
-import type { ExtractPropTypes } from 'vue'
+import type {
+  ComputedRef,
+  ExtractPropTypes,
+  InjectionKey,
+  Ref,
+  ToRefs,
+} from 'vue'
 import type { SliderMarkerProps } from './marker'
 import type Slider from './slider.vue'
 
@@ -112,3 +118,14 @@ export const sliderEmits = {
 export type SliderEmits = typeof sliderEmits
 
 export type SliderInstance = InstanceType<typeof Slider>
+
+export interface SliderContext extends ToRefs<SliderProps> {
+  precision: ComputedRef<number>
+  sliderSize: Ref<number>
+  emitChange: () => void
+  resetSize: () => void
+  updateDragging: (val: boolean) => void
+}
+
+export const sliderContextKey: InjectionKey<SliderContext> =
+  Symbol('sliderContextKey')

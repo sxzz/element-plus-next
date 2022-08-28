@@ -67,7 +67,3 @@ export type ButtonType = ButtonProps['type']
 export type ButtonNativeType = ButtonProps['nativeType']
 
 export type ButtonInstance = InstanceType<typeof button>
-
-export interface ButtonConfigContext {
-  autoInsertSpace?: boolean
-}

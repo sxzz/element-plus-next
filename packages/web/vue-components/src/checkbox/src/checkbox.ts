@@ -9,12 +9,7 @@ import {
 } from 'vue'
 import { toTypeString } from '@vue/shared'
 import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
-import {
-  useFormItem,
-  useFormItemInputId,
-  useSize,
-  useSizeProp,
-} from '@element-plus-next/vue-hooks'
+import { useSize, useSizeProp } from '@element-plus-next/vue-hooks'
 import {
   debugWarn,
   isArray,
@@ -22,6 +17,7 @@ import {
   isNumber,
   isString,
 } from '@element-plus-next/utils'
+import { useFormItem, useFormItemInputId } from '../../form'
 
 import type { ComponentInternalInstance, ExtractPropTypes, PropType } from 'vue'
 import type { ICheckboxGroupInstance } from './checkbox.type'

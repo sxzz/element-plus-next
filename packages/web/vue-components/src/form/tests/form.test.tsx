@@ -20,9 +20,8 @@ import Input from '../../input'
 import Form from '../src/form.vue'
 import FormItem from '../src/form-item.vue'
 import DynamicDomainForm, { formatDomainError } from '../mocks/mock-data'
-
 import type { VueWrapper } from '@vue/test-utils'
-import type { FormRules } from '@element-plus-next/vue-context'
+import type { FormRules } from './form'
 
 type FormInstance = InstanceType<typeof Form>
 type FormItemInstance = InstanceType<typeof FormItem>

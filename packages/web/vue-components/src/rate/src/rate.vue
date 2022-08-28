@@ -52,16 +52,13 @@
 import { type CSSProperties, computed, inject, ref, watch } from 'vue'
 import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
 import { hasClass, isArray, isObject } from '@element-plus-next/utils'
+import { useNamespace, useSize } from '@element-plus-next/vue-hooks'
+import { ElIcon } from '../../icon'
 import {
   formContextKey,
   formItemContextKey,
-} from '@element-plus-next/vue-context'
-import {
   useFormItemInputId,
-  useNamespace,
-  useSize,
-} from '@element-plus-next/vue-hooks'
-import { ElIcon } from '../../icon'
+} from '../../form'
 import { rateEmits, rateProps } from './rate'
 
 function getValueFromMap<T>(

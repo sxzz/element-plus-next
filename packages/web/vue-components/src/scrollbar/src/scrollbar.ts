@@ -1,6 +1,6 @@
 import { isNumber } from '@element-plus-next/utils'
 import { buildProps, definePropType } from '@element-plus-next/vue-utils'
-import type { ExtractPropTypes, StyleValue } from 'vue'
+import type { ExtractPropTypes, InjectionKey, StyleValue } from 'vue'
 import type Scrollbar from './scrollbar.vue'
 
 export const scrollbarProps = buildProps({
@@ -54,3 +54,12 @@ export const scrollbarEmits = {
 export type ScrollbarEmits = typeof scrollbarEmits
 
 export type ScrollbarInstance = InstanceType<typeof Scrollbar>
+
+export interface ScrollbarContext {
+  scrollbarElement: HTMLDivElement
+  wrapElement: HTMLDivElement
+}
+
+export const scrollbarContextKey: InjectionKey<ScrollbarContext> = Symbol(
+  'scrollbarContextKey'
+)

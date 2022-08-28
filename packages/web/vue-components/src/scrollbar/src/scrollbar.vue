@@ -49,11 +49,14 @@ import {
   isNumber,
   isObject,
 } from '@element-plus-next/utils'
-import { scrollbarContextKey } from '@element-plus-next/vue-context'
 import { useNamespace } from '@element-plus-next/vue-hooks'
+import {
+  scrollbarContextKey,
+  scrollbarEmits,
+  scrollbarProps,
+} from './scrollbar'
 import { GAP } from './util'
 import Bar from './bar.vue'
-import { scrollbarEmits, scrollbarProps } from './scrollbar'
 import type { BarInstance } from './bar'
 import type { CSSProperties, StyleValue } from 'vue'
 

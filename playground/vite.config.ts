@@ -2,6 +2,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
+import VueMacros from 'unplugin-vue-macros/vite'
 import './vite.init'
 
 export default defineConfig(async () => {
@@ -10,9 +11,16 @@ export default defineConfig(async () => {
       conditions: ['dev'],
     },
     plugins: [
-      Vue({
-        reactivityTransform: true,
+      VueMacros({
+        setupComponent: false,
+        setupSFC: false,
+        plugins: {
+          vue: Vue({
+            reactivityTransform: true,
+          }),
+        },
       }),
+
       Components({
         // TODO: vue-components-resolver
         // resolvers: [ElementPlusResolver()],

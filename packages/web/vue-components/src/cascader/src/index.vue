@@ -201,25 +201,21 @@ import { debounce } from 'lodash-unified'
 import { isClient, useResizeObserver } from '@vueuse/core'
 import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
 import { ClickOutside as Clickoutside } from '@element-plus-next/vue-directives'
-import {
-  useFormItem,
-  useLocale,
-  useNamespace,
-  useSize,
-} from '@element-plus-next/vue-hooks'
+import { useLocale, useNamespace, useSize } from '@element-plus-next/vue-hooks'
 import {
   debugWarn,
   focusNode,
   getSibling,
   isKorean,
-  isValidComponentSize,
 } from '@element-plus-next/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
 } from '@element-plus-next/constants'
-import { ElCascaderPanel, CommonProps } from '../../cascader-panel'
+import { isValidComponentSize } from '@element-plus-next/vue-utils'
+import { useFormItem } from '../../form'
+import { CommonProps, ElCascaderPanel } from '../../cascader-panel'
 import { ElInput } from '../../input'
 import { ElTooltip, useTooltipContentProps } from '../../tooltip'
 import { ElScrollbar } from '../../scrollbar'

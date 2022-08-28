@@ -116,15 +116,11 @@ import {
 import { debounce } from 'lodash-unified'
 import { ArrowDown, Close } from '@element-plus/icons-vue'
 import { ClickOutside } from '@element-plus-next/vue-directives'
-import {
-  useFormItem,
-  useFormItemInputId,
-  useLocale,
-  useNamespace,
-  useSize,
-} from '@element-plus-next/vue-hooks'
+import { useLocale, useNamespace, useSize } from '@element-plus-next/vue-hooks'
 import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
-import { debugWarn, isValidComponentSize } from '@element-plus-next/utils'
+import { debugWarn } from '@element-plus-next/utils'
+import { isValidComponentSize } from '@element-plus-next/vue-utils'
+import { useFormItem, useFormItemInputId } from '../../form'
 import ElButton from '../../button'
 import ElIcon from '../../icon'
 import ElTooltip from '../../tooltip'

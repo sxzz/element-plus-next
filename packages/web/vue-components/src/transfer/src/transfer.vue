@@ -56,14 +56,11 @@
 <script lang="ts" setup>
 import { computed, h, reactive, ref, useSlots, watch } from 'vue'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
-import {
-  useFormItem,
-  useLocale,
-  useNamespace,
-} from '@element-plus-next/vue-hooks'
+import { useLocale, useNamespace } from '@element-plus-next/vue-hooks'
 import { debugWarn, isEmpty, isUndefined } from '@element-plus-next/utils'
 import { ElIcon } from '../../icon'
 import { ElButton } from '../../button'
+import { useFormItem } from '../../form'
 import { transferEmits, transferProps } from './transfer'
 import {
   useCheckedChange,

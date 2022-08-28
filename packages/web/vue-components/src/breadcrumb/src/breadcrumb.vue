@@ -11,10 +11,8 @@
 
 <script lang="ts" setup>
 import { onMounted, provide, ref } from 'vue'
-import { breadcrumbKey } from '@element-plus-next/vue-context'
-
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { breadcrumbProps } from './breadcrumb'
+import { breadcrumbContextKey, breadcrumbProps } from './breadcrumb'
 
 defineOptions({
   name: 'ElBreadcrumb',
@@ -25,7 +23,7 @@ const props = defineProps(breadcrumbProps)
 const ns = useNamespace('breadcrumb')
 const breadcrumb = ref<HTMLDivElement>()
 
-provide(breadcrumbKey, props)
+provide(breadcrumbContextKey, props)
 
 onMounted(() => {
   const items = breadcrumb.value!.querySelectorAll(`.${ns.e('item')}`)

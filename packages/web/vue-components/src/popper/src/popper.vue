@@ -4,11 +4,11 @@
 
 <script lang="ts" setup>
 import { computed, provide, ref } from 'vue'
-import { POPPER_INJECTION_KEY } from '@element-plus-next/vue-context'
+import { POPPER_INJECTION_KEY } from './context'
 import { usePopperProps } from './popper'
 
 import type { Instance as PopperInstance } from '@popperjs/core'
-import type { ElPopperInjectionContext } from '@element-plus-next/vue-context'
+import type { ElPopperInjectionContext } from './context'
 
 defineOptions({
   name: 'ElPopperRoot',

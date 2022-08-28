@@ -14,6 +14,7 @@ export * from './src/popper'
 export * from './src/trigger'
 export * from './src/content'
 export * from './src/arrow'
+export * from './src/context'
 
 export type { Placement, Options } from '@popperjs/core'
 export type ElPopperArrowInstance = InstanceType<typeof ElPopperArrow>

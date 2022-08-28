@@ -1,6 +1,7 @@
 import { isNumber } from '@element-plus-next/utils'
 import { buildProps } from '@element-plus-next/vue-utils'
-import type { ExtractPropTypes } from 'vue'
+import type { CarouselItemContext } from './carousel-item'
+import type { ExtractPropTypes, InjectionKey, Ref } from 'vue'
 import type Carousel from './carousel.vue'
 
 export const carouselProps = buildProps({
@@ -67,3 +68,17 @@ export type CarouselProps = ExtractPropTypes<typeof carouselProps>
 export type CarouselEmits = typeof carouselEmits
 
 export type CarouselInstance = InstanceType<typeof Carousel>
+
+export type CarouselContext = {
+  root: Ref<HTMLElement | undefined>
+  items: Ref<CarouselItemContext[]>
+  isCardType: Ref<boolean>
+  isVertical: Ref<boolean>
+  loop: boolean
+  addItem: (item: CarouselItemContext) => void
+  removeItem: (uid: number | undefined) => void
+  setActiveItem: (index: number) => void
+}
+
+export const carouselContextKey: InjectionKey<CarouselContext> =
+  Symbol('carouselContextKey')

@@ -17,18 +17,10 @@ import {
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
 } from '@element-plus-next/constants'
-import {
-  debugWarn,
-  getComponentSize,
-  isKorean,
-  scrollIntoView,
-} from '@element-plus-next/utils'
-import {
-  useFormItem,
-  useLocale,
-  useNamespace,
-  useSize,
-} from '@element-plus-next/vue-hooks'
+import { debugWarn, isKorean, scrollIntoView } from '@element-plus-next/utils'
+import { getComponentSize } from '@element-plus-next/vue-utils'
+import { useLocale, useNamespace, useSize } from '@element-plus-next/vue-hooks'
+import { useFormItem } from '../../form'
 
 import type { ComponentPublicInstance } from 'vue'
 import type ElTooltip from '../../tooltip'

@@ -52,6 +52,11 @@ import TooltipV2Arrow from './arrow.vue'
 import TooltipV2Content from './content.vue'
 import TooltipV2Trigger from './trigger.vue'
 
+// DO NOT REMOVE
+// @ts-expect-error fix TS2742 https://github.com/microsoft/TypeScript/issues/42873#issuecomment-1193972441
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import type { Placement, Strategy, VirtualElement } from '@floating-ui/dom'
+
 defineOptions({
   name: 'ElTooltipV2',
 })

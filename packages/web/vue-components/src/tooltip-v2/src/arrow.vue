@@ -4,10 +4,7 @@
 
 <script setup lang="ts">
 import { computed, inject } from 'vue'
-import {
-  tooltipV2ContentKey,
-  tooltipV2RootKey,
-} from '@element-plus-next/vue-context'
+import { tooltipV2ContentKey, tooltipV2RootKey } from './common'
 import { tooltipV2ArrowProps, tooltipV2ArrowSpecialProps } from './arrow'
 
 import type { CSSProperties } from 'vue'

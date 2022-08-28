@@ -40,9 +40,9 @@
   },
   "dependencies": {
     "@element-plus-next/constants": "workspace:*",
+    "@element-plus-next/locale": "workspace:*",
     "@element-plus-next/utils": "workspace:*",
-    "@popperjs/core": "^2.11.6",
-    "async-validator": "^4.2.5"
+    "@vueuse/core": "^9.1.1"
   },
   "devDependencies": {
     "vue": "^3.2.31"

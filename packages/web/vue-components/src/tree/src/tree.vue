@@ -44,7 +44,7 @@ import {
   watch,
 } from 'vue'
 import { useLocale, useNamespace } from '@element-plus-next/vue-hooks'
-import { formItemContextKey } from '@element-plus-next/vue-context'
+import { formItemContextKey } from '../../form'
 import TreeStore from './model/tree-store'
 import { getNodeKey as getNodeKeyUtil } from './model/util'
 import ElTreeNode from './tree-node.vue'

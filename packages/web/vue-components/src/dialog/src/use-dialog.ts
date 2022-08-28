@@ -10,13 +10,13 @@ import { isClient, useTimeoutFn } from '@vueuse/core'
 
 import {
   defaultNamespace,
-  useGlobalConfig,
   useId,
   useLockscreen,
   useZIndex,
 } from '@element-plus-next/vue-hooks'
 import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
 import { addUnit } from '@element-plus-next/utils'
+import { useGlobalConfig } from '@element-plus-next/vue-context'
 
 import type { CSSProperties, Ref, SetupContext } from 'vue'
 import type { DialogEmits, DialogProps } from './dialog'

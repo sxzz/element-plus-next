@@ -15,7 +15,6 @@ import {
   iconPropType,
 } from '@element-plus-next/vue-utils'
 import { useLocale, useNamespace } from '@element-plus-next/vue-hooks'
-import { elPaginationKey } from '@element-plus-next/vue-context'
 
 import Prev from './components/prev.vue'
 import Next from './components/next.vue'
@@ -24,7 +23,13 @@ import Jumper from './components/jumper.vue'
 import Total from './components/total.vue'
 import Pager from './components/pager.vue'
 
-import type { ExtractPropTypes, VNode } from 'vue'
+import type {
+  ComputedRef,
+  ExtractPropTypes,
+  InjectionKey,
+  VNode,
+  WritableComputedRef,
+} from 'vue'
 
 /**
  * It it user's responsibility to guarantee that the value of props.total... is number
@@ -364,3 +369,14 @@ export default defineComponent({
     }
   },
 })
+
+export interface ElPaginationContext {
+  currentPage?: WritableComputedRef<number>
+  pageCount?: ComputedRef<number>
+  disabled?: ComputedRef<boolean>
+  changeEvent?: (val: number) => void
+  handleSizeChange?: (val: number) => void
+}
+
+export const elPaginationKey: InjectionKey<ElPaginationContext> =
+  Symbol('elPaginationKey')

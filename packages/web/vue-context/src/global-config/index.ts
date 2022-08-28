@@ -1,30 +1,54 @@
 import { computed, getCurrentInstance, inject, provide, ref, unref } from 'vue'
-import { configProviderContextKey } from '@element-plus-next/vue-context'
 import { debugWarn, keysOf } from '@element-plus-next/utils'
-
+import type { ComponentSize } from '@element-plus-next/constants'
+import type { Language } from '@element-plus-next/locale'
+import type { App, InjectionKey, Ref } from 'vue'
 import type { MaybeRef } from '@vueuse/core'
-import type { App, Ref } from 'vue'
-import type { ConfigProviderContext } from '@element-plus-next/vue-context'
+
+export interface GlobalConfigButton {
+  autoInsertSpace?: boolean
+}
+
+export interface GlobalConfigMessage {
+  max?: number
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface GlobalConfigExperimentalFeatures {
+  // to be defined
+}
+
+export interface GlobalConfig {
+  a11y?: boolean
+  keyboardNavigation?: boolean
+  locale?: Language
+  size?: ComponentSize
+  button?: GlobalConfigButton
+  experimentalFeatures?: GlobalConfigExperimentalFeatures
+  message?: GlobalConfigMessage
+  zIndex?: number
+  namespace?: string
+}
+
+export const globalConfigKey: InjectionKey<Ref<GlobalConfig>> =
+  Symbol('globalConfigKey')
 
 // this is meant to fix global methods like `ElMessage(opts)`, this way we can inject current locale
 // into the component as default injection value.
 // refer to: https://github.com/element-plus/element-plus/issues/2610#issuecomment-887965266
-const globalConfig = ref<ConfigProviderContext>()
+const globalConfig = ref<GlobalConfig>()
 
 export function useGlobalConfig<
-  K extends keyof ConfigProviderContext,
-  D extends ConfigProviderContext[K]
->(
-  key: K,
-  defaultValue?: D
-): Ref<Exclude<ConfigProviderContext[K], undefined> | D>
-export function useGlobalConfig(): Ref<ConfigProviderContext>
+  K extends keyof GlobalConfig,
+  D extends GlobalConfig[K]
+>(key: K, defaultValue?: D): Ref<Exclude<GlobalConfig[K], undefined> | D>
+export function useGlobalConfig(): Ref<GlobalConfig>
 export function useGlobalConfig(
-  key?: keyof ConfigProviderContext,
+  key?: keyof GlobalConfig,
   defaultValue = undefined
 ) {
   const config = getCurrentInstance()
-    ? inject(configProviderContextKey, globalConfig)
+    ? inject(globalConfigKey, globalConfig)
     : globalConfig
   if (key) {
     return computed(() => config.value?.[key] ?? defaultValue)
@@ -34,7 +58,7 @@ export function useGlobalConfig(
 }
 
 export const provideGlobalConfig = (
-  config: MaybeRef<ConfigProviderContext>,
+  config: MaybeRef<GlobalConfig>,
   app?: App,
   global = false
 ) => {
@@ -55,21 +79,17 @@ export const provideGlobalConfig = (
     if (!oldConfig?.value) return cfg
     return mergeConfig(oldConfig.value, cfg)
   })
-  provideFn(configProviderContextKey, context)
+  provideFn(globalConfigKey, context)
   if (global || !globalConfig.value) {
     globalConfig.value = context.value
   }
   return context
 }
 
-const mergeConfig = (
-  a: ConfigProviderContext,
-  b: ConfigProviderContext
-): ConfigProviderContext => {
+const mergeConfig = (a: GlobalConfig, b: GlobalConfig): GlobalConfig => {
   const keys = [...new Set([...keysOf(a), ...keysOf(b)])]
   const obj: Record<string, any> = {}
   for (const key of keys) {
-    // @ts-expect-error V3 todo
     obj[key] = b[key] ?? a[key]
   }
   return obj

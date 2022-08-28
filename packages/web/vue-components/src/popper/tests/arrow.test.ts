@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { POPPER_CONTENT_INJECTION_KEY } from '@element-plus-next/vue-context'
+import { POPPER_CONTENT_INJECTION_KEY } from '../src/context'
 import ElArrow from '../src/arrow.vue'
 
 import type { VueWrapper } from '@vue/test-utils'

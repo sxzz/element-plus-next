@@ -172,14 +172,10 @@ import { computed, inject, nextTick, provide, ref, unref, watch } from 'vue'
 import { isEqual } from 'lodash-unified'
 import { onClickOutside } from '@vueuse/core'
 import { Calendar, Clock } from '@element-plus/icons-vue'
-import {
-  useFormItem,
-  useLocale,
-  useNamespace,
-  useSize,
-} from '@element-plus-next/vue-hooks'
+import { useLocale, useNamespace, useSize } from '@element-plus-next/vue-hooks'
 import { debugWarn, isArray } from '@element-plus-next/utils'
 import { EVENT_CODE } from '@element-plus-next/constants'
+import { useFormItem } from '../../../form'
 import ElInput from '../../../input'
 import ElIcon from '../../../icon'
 import ElTooltip from '../../../tooltip'

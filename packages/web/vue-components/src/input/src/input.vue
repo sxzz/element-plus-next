@@ -178,12 +178,11 @@ import {
   useAttrs,
   useCursor,
   useDisabled,
-  useFormItem,
-  useFormItemInputId,
   useNamespace,
   useSize,
 } from '@element-plus-next/vue-hooks'
 import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
+import { useFormItem, useFormItemInputId } from '../../form'
 import { ElIcon } from '../../icon'
 import { calcTextareaHeight } from './utils'
 import { inputEmits, inputProps } from './input'

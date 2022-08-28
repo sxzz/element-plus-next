@@ -1,14 +1,14 @@
 import { defineComponent, renderSlot, watch } from 'vue'
 import { buildProps, definePropType } from '@element-plus-next/vue-utils'
-import { provideGlobalConfig, useSizeProp } from '@element-plus-next/vue-hooks'
+import { provideGlobalConfig } from '@element-plus-next/vue-context'
+import { useSizeProp } from '@element-plus-next/vue-hooks'
+import type {
+  GlobalConfig,
+  GlobalConfigMessage,
+} from '@element-plus-next/vue-context'
+import type { ExtractPropTypes, InjectionKey, Ref } from 'vue'
 
-import type { ExtractPropTypes } from 'vue'
-import type { ExperimentalFeatures } from '@element-plus-next/vue-context'
-import type { Language } from '@element-plus-next/locale'
-import type { ButtonConfigContext } from '../../button'
-import type { MessageConfigContext } from '../../message'
-
-export const messageConfig: MessageConfigContext = {}
+export const messageConfig: GlobalConfigMessage = {}
 
 export const configProviderProps = buildProps({
   // Controlling if the users want a11y features.
@@ -18,17 +18,17 @@ export const configProviderProps = buildProps({
   },
 
   locale: {
-    type: definePropType<Language>(Object),
+    type: definePropType<GlobalConfig['locale']>(Object),
   },
 
   size: useSizeProp,
 
   button: {
-    type: definePropType<ButtonConfigContext>(Object),
+    type: definePropType<GlobalConfig['button']>(Object),
   },
 
   experimentalFeatures: {
-    type: definePropType<ExperimentalFeatures>(Object),
+    type: definePropType<GlobalConfig['experimentalFeatures']>(Object),
   },
 
   // Controls if we should handle keyboard navigation
@@ -38,7 +38,7 @@ export const configProviderProps = buildProps({
   },
 
   message: {
-    type: definePropType<MessageConfigContext>(Object),
+    type: definePropType<GlobalConfig['message']>(Object),
   },
 
   zIndex: Number,
@@ -67,5 +67,11 @@ const ConfigProvider = defineComponent({
   },
 })
 export type ConfigProviderInstance = InstanceType<typeof ConfigProvider>
+
+export type ConfigProviderContext = Partial<ConfigProviderProps>
+
+export const configProviderContextKey: InjectionKey<
+  Ref<ConfigProviderContext>
+> = Symbol('configProviderContextKey')
 
 export default ConfigProvider

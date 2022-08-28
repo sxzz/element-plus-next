@@ -3,7 +3,14 @@ import { buildProps, definePropType } from '@element-plus-next/vue-utils'
 import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
 import { dialogContentProps } from './dialog-content'
 
-import type { ExtractPropTypes } from 'vue'
+import type {
+  CSSProperties,
+  ComputedRef,
+  ExtractPropTypes,
+  InjectionKey,
+  Ref,
+} from 'vue'
+import type { useNamespace } from '@element-plus-next/vue-hooks'
 
 type DoneFn = (cancel?: boolean) => void
 export type DialogBeforeCloseFn = (done: DoneFn) => void
@@ -77,3 +84,16 @@ export const dialogEmits = {
   closeAutoFocus: () => true,
 }
 export type DialogEmits = typeof dialogEmits
+
+export type DialogContext = {
+  dialogRef: Ref<HTMLElement | undefined>
+  headerRef: Ref<HTMLElement | undefined>
+  bodyId: Ref<string>
+  ns: ReturnType<typeof useNamespace>
+  rendered: Ref<boolean>
+  style: ComputedRef<CSSProperties>
+}
+
+// v3 TODO: rename to dialogContextKey
+export const dialogInjectionKey: InjectionKey<DialogContext> =
+  Symbol('dialogInjectionKey')

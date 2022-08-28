@@ -30,7 +30,7 @@ import {
 } from 'vue'
 import { debugWarn, isUndefined } from '@element-plus-next/utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { carouselContextKey } from '@element-plus-next/vue-context'
+import { carouselContextKey } from './carousel'
 import { carouselItemProps } from './carousel-item'
 
 import type { CSSProperties } from 'vue'

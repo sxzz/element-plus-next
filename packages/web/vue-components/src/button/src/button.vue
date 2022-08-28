@@ -45,13 +45,13 @@ import { Text, computed, inject, ref, useSlots } from 'vue'
 import {
   useDeprecated,
   useDisabled,
-  useFormItem,
-  useGlobalConfig,
   useNamespace,
   useSize,
 } from '@element-plus-next/vue-hooks'
-import { buttonGroupContextKey } from '@element-plus-next/vue-context'
+import { useGlobalConfig } from '@element-plus-next/vue-context'
+import { useFormItem } from '../../form'
 import { ElIcon } from '../../icon'
+import { buttonGroupContextKey } from './button-group'
 import { buttonEmits, buttonProps } from './button'
 import { useButtonCustomStyle } from './button-custom'
 

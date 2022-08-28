@@ -1,7 +1,7 @@
 import { computed, defineComponent, h, provide } from 'vue'
 import { describe, expect, test, vi } from 'vitest'
 import makeMount from '@element-plus/test-utils/make-mount'
-import { uploadContextKey } from '@element-plus-next/vue-context'
+import { uploadContextKey } from '../src/upload'
 import UploadDragger from '../src/upload-dragger.vue'
 
 const AXIOM = 'Rem is the best girl'

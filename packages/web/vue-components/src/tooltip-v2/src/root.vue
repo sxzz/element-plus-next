@@ -15,10 +15,7 @@ import {
 import { useTimeoutFn } from '@vueuse/core'
 import { useId, useNamespace } from '@element-plus-next/vue-hooks'
 import { isNumber, isPropAbsent } from '@element-plus-next/utils'
-import {
-  TOOLTIP_V2_OPEN,
-  tooltipV2RootKey,
-} from '@element-plus-next/vue-context'
+import { TOOLTIP_V2_OPEN, tooltipV2RootKey } from './common'
 import { tooltipV2RootProps } from './root'
 
 defineOptions({

@@ -73,11 +73,10 @@ import {
   useNamespace,
   useSameTarget,
 } from '@element-plus-next/vue-hooks'
-import { dialogInjectionKey } from '@element-plus-next/vue-context'
 import { ElOverlay } from '../../overlay'
 import ElFocusTrap from '../../focus-trap'
+import { dialogEmits, dialogInjectionKey, dialogProps } from './dialog'
 import ElDialogContent from './dialog-content.vue'
-import { dialogEmits, dialogProps } from './dialog'
 import { useDialog } from './use-dialog'
 
 defineOptions({

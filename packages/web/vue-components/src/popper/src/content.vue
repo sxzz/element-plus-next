@@ -40,12 +40,9 @@ import { isNil } from 'lodash-unified'
 import { createPopper } from '@popperjs/core'
 import { NOOP, isElement } from '@element-plus-next/utils'
 import { useNamespace, useZIndex } from '@element-plus-next/vue-hooks'
-import {
-  POPPER_CONTENT_INJECTION_KEY,
-  POPPER_INJECTION_KEY,
-  formItemContextKey,
-} from '@element-plus-next/vue-context'
 import ElFocusTrap from '../../focus-trap'
+import { formItemContextKey } from '../../form'
+import { POPPER_CONTENT_INJECTION_KEY, POPPER_INJECTION_KEY } from './context'
 import { usePopperContentEmits, usePopperContentProps } from './content'
 import { buildPopperOptions, unwrapMeasurableEl } from './utils'
 

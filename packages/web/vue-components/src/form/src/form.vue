@@ -7,9 +7,8 @@
 <script lang="ts" setup>
 import { computed, provide, reactive, toRefs, watch } from 'vue'
 import { debugWarn, isFunction } from '@element-plus-next/utils'
-import { formContextKey } from '@element-plus-next/vue-context'
 import { useNamespace, useSize } from '@element-plus-next/vue-hooks'
-import { formEmits, formProps } from './form'
+import { formContextKey, formEmits, formProps } from './form'
 import { filterFields, useFormLabelWidth } from './utils'
 
 import type { ValidateFieldsError } from 'async-validator'
@@ -19,7 +18,7 @@ import type {
   FormItemContext,
   FormValidateCallback,
   FormValidationResult,
-} from '@element-plus-next/vue-context'
+} from './form'
 import type { FormItemProp } from './form-item'
 
 const COMPONENT_NAME = 'ElForm'

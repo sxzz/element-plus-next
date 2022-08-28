@@ -1,4 +1,4 @@
-import { isClient } from '@vueuse/core'
+import { isClient } from '@vueuse/shared'
 
 export const isFirefox = (): boolean =>
   isClient && /firefox/i.test(window.navigator.userAgent)

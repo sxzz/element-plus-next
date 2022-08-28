@@ -16,22 +16,15 @@ import {
   useWindowFocus,
 } from '@vueuse/core'
 import { ArrowLeft, ArrowRight, Close } from '@element-plus/icons-vue'
-import {
-  NOOP,
-  buildProps,
-  capitalize,
-  definePropType,
-  mutable,
-  throwError,
-} from '@element-plus-next/utils'
+import { NOOP, capitalize, mutable, throwError } from '@element-plus-next/utils'
+import { buildProps, definePropType } from '@element-plus-next/vue-utils'
 import { EVENT_CODE } from '@element-plus-next/constants'
-import { tabsRootContextKey } from '@element-plus-next/vue-context'
 import { useNamespace } from '@element-plus-next/vue-hooks'
 import { ElIcon } from '../../icon'
+import { tabsRootContextKey } from './tabs'
 import TabBar from './tab-bar.vue'
 import type { CSSProperties, ExtractPropTypes } from 'vue'
-import type { TabsPaneContext } from '@element-plus-next/vue-context'
-import type { TabPanelName } from './tabs'
+import type { TabPanelName, TabsPaneContext } from './tabs'
 
 interface Scrollable {
   next?: boolean

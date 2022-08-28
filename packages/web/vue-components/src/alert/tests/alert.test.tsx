@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { TypeComponentsMap } from '@element-plus-next/utils'
+import { TypeComponentsMap } from '@element-plus-next/vue-utils'
 import Alert from '../src/alert.vue'
 
 const AXIOM = 'Rem is the best girl'

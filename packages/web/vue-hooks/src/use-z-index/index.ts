@@ -1,5 +1,5 @@
 import { computed, ref } from 'vue'
-import { useGlobalConfig } from '../use-global-config'
+import { useGlobalConfig } from '@element-plus-next/vue-context'
 
 const zIndex = ref(0)
 

@@ -9,17 +9,23 @@ import {
   watch,
 } from 'vue'
 import { Plus } from '@element-plus/icons-vue'
-import { tabsRootContextKey } from '@element-plus-next/vue-context'
 import { isNumber, isString, isUndefined } from '@element-plus-next/utils'
 import { buildProps, definePropType } from '@element-plus-next/vue-utils'
 import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
 import { useDeprecated, useNamespace } from '@element-plus-next/vue-hooks'
 import { ElIcon } from '../../icon'
 import TabNav from './tab-nav'
+import type { TabPaneProps } from './tab-pane'
 import type { TabNavInstance } from './tab-nav'
-import type { TabsPaneContext } from '@element-plus-next/vue-context'
 
-import type { ExtractPropTypes } from 'vue'
+import type {
+  ComputedRef,
+  ExtractPropTypes,
+  InjectionKey,
+  Ref,
+  Slots,
+  UnwrapRef,
+} from 'vue'
 import type { Awaitable } from '@element-plus-next/utils'
 
 export type TabPanelName = string | number
@@ -71,6 +77,26 @@ export const tabsEmits = {
 }
 export type TabsEmits = typeof tabsEmits
 
+export type TabsPaneContext = UnwrapRef<{
+  uid: number
+  slots: Slots
+  props: TabPaneProps
+  paneName: ComputedRef<string | number | undefined>
+  active: ComputedRef<boolean>
+  index: Ref<string | undefined>
+  isClosable: ComputedRef<boolean>
+}>
+
+export interface TabsRootContext {
+  props: TabsProps
+  currentName: Ref<string | number>
+  registerPane: (pane: TabsPaneContext) => void
+  unregisterPane: (uid: number) => void
+}
+
+export const tabsRootContextKey: InjectionKey<TabsRootContext> =
+  Symbol('tabsRootContextKey')
+
 export default defineComponent({
   name: 'ElTabs',
 
@@ -101,6 +127,7 @@ export default defineComponent({
         if (canLeave !== false) {
           changeCurrentName(value)
 
+          // @ts-expect-error exposed
           nav$.value?.removeFocus?.()
         }
       } catch {}
@@ -152,6 +179,7 @@ export default defineComponent({
 
     watch(currentName, async () => {
       await nextTick()
+      // @ts-expect-error exposed
       nav$.value?.scrollToActiveTab()
     })
 

@@ -1,7 +1,7 @@
 import { computed, ref } from 'vue'
 import { debugWarn, ensureArray } from '@element-plus-next/utils'
 import type { Arrayable } from '@element-plus-next/utils'
-import type { FormItemContext } from '@element-plus-next/vue-context'
+import type { FormItemContext } from './form'
 import type { FormItemProp } from './form-item'
 
 const SCOPE = 'ElForm'

@@ -3,7 +3,7 @@ import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
 import { debugWarn, throwError } from '@element-plus-next/utils'
 import type { ComputedRef, SetupContext } from 'vue'
 import type { Arrayable } from '@element-plus-next/utils'
-import type { FormItemContext } from '@element-plus-next/vue-context'
+import type { FormItemContext } from '../../../form'
 import type { SliderEmits, SliderInitData, SliderProps } from '../slider'
 
 export const useWatch = (

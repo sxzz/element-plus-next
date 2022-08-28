@@ -1,5 +1,5 @@
 import * as vueShared from '@vue/shared'
-import * as vueuse from '@vueuse/core'
+import * as vueuse from '@vueuse/shared'
 import { describe, expect, it } from 'vitest'
 import {
   isArray,

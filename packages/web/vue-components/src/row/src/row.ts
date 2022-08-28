@@ -1,5 +1,5 @@
 import { buildProps } from '@element-plus-next/vue-utils'
-import type { ExtractPropTypes } from 'vue'
+import type { ComputedRef, ExtractPropTypes, InjectionKey } from 'vue'
 import type Row from './row.vue'
 
 export const RowJustify = [
@@ -36,3 +36,9 @@ export const rowProps = buildProps({
 
 export type RowProps = ExtractPropTypes<typeof rowProps>
 export type RowInstance = InstanceType<typeof Row>
+
+interface RowContext {
+  gutter: ComputedRef<number>
+}
+
+export const rowContextKey: InjectionKey<RowContext> = Symbol('rowContextKey')

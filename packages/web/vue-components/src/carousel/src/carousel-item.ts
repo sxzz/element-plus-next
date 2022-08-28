@@ -13,3 +13,20 @@ export const carouselItemProps = buildProps({
 export type CarouselItemProps = ExtractPropTypes<typeof carouselItemProps>
 
 export type CarouselItemInstance = InstanceType<typeof CarouselItem>
+
+export type CarouselItemStates = {
+  hover: boolean
+  translate: number
+  scale: number
+  active: boolean
+  ready: boolean
+  inStage: boolean
+  animating: boolean
+}
+
+export type CarouselItemContext = {
+  props: CarouselItemProps
+  states: CarouselItemStates
+  uid: number | undefined
+  translateItem: (index: number, activeIndex: number, oldIndex?: number) => void
+}

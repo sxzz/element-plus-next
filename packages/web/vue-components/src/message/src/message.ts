@@ -13,10 +13,6 @@ export const messageTypes = ['success', 'info', 'warning', 'error'] as const
 
 export type messageType = typeof messageTypes[number]
 
-export interface MessageConfigContext {
-  max?: number
-}
-
 export const messageDefaults = mutable({
   customClass: '',
   center: false,

@@ -1,6 +1,6 @@
 import { buttonProps } from './button'
 
-import type { ExtractPropTypes } from 'vue'
+import type { ExtractPropTypes, InjectionKey } from 'vue'
 import type buttonGroup from './button-group.vue'
 
 export const buttonGroupProps = {
@@ -10,3 +10,12 @@ export const buttonGroupProps = {
 export type ButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>
 
 export type ButtonGroupInstance = InstanceType<typeof buttonGroup>
+
+export interface ButtonGroupContext {
+  size?: ButtonGroupProps['size']
+  type?: ButtonGroupProps['type']
+}
+
+export const buttonGroupContextKey: InjectionKey<ButtonGroupContext> = Symbol(
+  'buttonGroupContextKey'
+)

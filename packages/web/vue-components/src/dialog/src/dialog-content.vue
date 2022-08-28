@@ -43,9 +43,9 @@
 import { computed, inject } from 'vue'
 import { useDraggable, useLocale } from '@element-plus-next/vue-hooks'
 import { CloseComponents, composeRefs } from '@element-plus-next/vue-utils'
-import { dialogInjectionKey } from '@element-plus-next/vue-context'
 import { FOCUS_TRAP_INJECTION_KEY } from '../../focus-trap'
 import { ElIcon } from '../../icon'
+import { dialogInjectionKey } from './dialog'
 import { dialogContentEmits, dialogContentProps } from './dialog-content'
 
 const { t } = useLocale()

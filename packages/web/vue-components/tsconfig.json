@@ -3,7 +3,6 @@
   "include": ["src", "../env.d.ts"],
   "exclude": ["src/*/tests"],
   "compilerOptions": {
-    "declaration": true,
     "emitDeclarationOnly": true,
     "outDir": "dist",
     "paths": {}

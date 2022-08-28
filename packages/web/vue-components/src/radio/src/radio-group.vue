@@ -23,14 +23,10 @@ import {
   watch,
 } from 'vue'
 import { UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
-import { radioGroupKey } from '@element-plus-next/vue-context'
-import {
-  useFormItem,
-  useFormItemInputId,
-  useId,
-  useNamespace,
-} from '@element-plus-next/vue-hooks'
+import { useId, useNamespace } from '@element-plus-next/vue-hooks'
 import { debugWarn } from '@element-plus-next/utils'
+import { useFormItem, useFormItemInputId } from '../../form'
+import { radioGroupKey } from './radio'
 import { radioGroupEmits, radioGroupProps } from './radio-group'
 import type { RadioGroupProps } from '..'
 

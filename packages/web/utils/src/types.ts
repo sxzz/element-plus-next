@@ -10,7 +10,7 @@ export {
   isPromise,
   isSymbol,
 } from '@vue/shared'
-export { isBoolean, isNumber } from '@vueuse/core'
+export { isBoolean, isNumber } from '@vueuse/shared'
 
 export const isUndefined = (val: any): val is undefined => val === undefined
 

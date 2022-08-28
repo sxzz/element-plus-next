@@ -1,10 +1,10 @@
 // @ts-nocheck
+import { mutable } from '@element-plus-next/utils'
 import {
   buildProp,
   buildProps,
   definePropType,
-  mutable,
-} from '@element-plus-next/utils'
+} from '@element-plus-next/vue-utils'
 import { VERTICAL } from './defaults'
 
 import type { ExtractPropTypes, StyleValue } from 'vue'

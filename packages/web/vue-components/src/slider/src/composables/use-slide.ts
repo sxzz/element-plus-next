@@ -4,7 +4,7 @@ import {
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
 } from '@element-plus-next/constants'
-import { useFormItem } from '@element-plus-next/vue-hooks'
+import { useFormItem } from '../../../form'
 import type { CSSProperties, Ref, SetupContext } from 'vue'
 import type { Arrayable } from '@element-plus-next/utils'
 import type { SliderEmits, SliderInitData, SliderProps } from '../slider'

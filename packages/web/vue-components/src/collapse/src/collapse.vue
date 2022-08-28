@@ -9,8 +9,7 @@ import { provide, ref, watch } from 'vue'
 import { ensureArray } from '@element-plus-next/utils'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus-next/constants'
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { collapseContextKey } from '@element-plus-next/vue-context'
-import { collapseEmits, collapseProps } from './collapse'
+import { collapseContextKey, collapseEmits, collapseProps } from './collapse'
 import type { CollapseActiveName } from './collapse'
 
 defineOptions({

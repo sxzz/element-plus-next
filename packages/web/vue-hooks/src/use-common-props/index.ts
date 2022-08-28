@@ -1,12 +1,8 @@
-import { computed, inject, ref, unref } from 'vue'
-import {
-  formContextKey,
-  formItemContextKey,
-} from '@element-plus-next/vue-context'
+import { computed, ref, unref } from 'vue'
 import { buildProp } from '@element-plus-next/vue-utils'
 import { componentSizes } from '@element-plus-next/constants'
+import { useGlobalConfig } from '@element-plus-next/vue-context'
 import { useProp } from '../use-prop'
-import { useGlobalConfig } from '../use-global-config'
 import type { ComponentSize } from '@element-plus-next/constants'
 import type { MaybeRef } from '@vueuse/core'
 
@@ -24,19 +20,20 @@ export const useSize = (
 
   const size = ignore.prop ? emptyRef : useProp<ComponentSize>('size')
   const globalConfig = ignore.global ? emptyRef : useGlobalConfig('size')
-  const form = ignore.form
-    ? { size: undefined }
-    : inject(formContextKey, undefined)
-  const formItem = ignore.formItem
-    ? { size: undefined }
-    : inject(formItemContextKey, undefined)
+  // V3 todo
+  // const form = ignore.form
+  //   ? { size: undefined }
+  //   : inject(formContextKey, undefined)
+  // const formItem = ignore.formItem
+  //   ? { size: undefined }
+  //   : inject(formItemContextKey, undefined)
 
   return computed(
     (): ComponentSize =>
       size.value ||
       unref(fallback) ||
-      formItem?.size ||
-      form?.size ||
+      // formItem?.size ||
+      // form?.size ||
       globalConfig.value ||
       ''
   )
@@ -44,8 +41,8 @@ export const useSize = (
 
 export const useDisabled = (fallback?: MaybeRef<boolean | undefined>) => {
   const disabled = useProp<boolean>('disabled')
-  const form = inject(formContextKey, undefined)
+  // const form = inject(formContextKey, undefined)
   return computed(
-    () => disabled.value || unref(fallback) || form?.disabled || false
+    () => disabled.value || unref(fallback) /*  || form?.disabled  */ || false
   )
 }

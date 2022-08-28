@@ -8,7 +8,7 @@
 import { computed, inject } from 'vue'
 import { isNumber, isObject } from '@element-plus-next/utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'
-import { rowContextKey } from '@element-plus-next/vue-context'
+import { rowContextKey } from '../../row'
 import { colProps } from './col'
 import type { CSSProperties } from 'vue'
 

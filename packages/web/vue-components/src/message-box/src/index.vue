@@ -175,7 +175,7 @@ import {
   TypeComponents,
   TypeComponentsMap,
   isValidComponentSize,
-} from '@element-plus-next/utils'
+} from '@element-plus-next/vue-utils'
 import ElButton from '../../button'
 import ElInput from '../../input'
 import { ElOverlay } from '../../overlay'
@@ -476,7 +476,7 @@ export default defineComponent({
     useRestoreActive(visible)
 
     return {
-      ...toRefs(state),
+      ...(toRefs(state) as any),
       ns,
       overlayEvent,
       visible,

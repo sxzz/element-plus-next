@@ -43,6 +43,7 @@
     "@element-plus-next/locale": "workspace:*",
     "@element-plus-next/utils": "workspace:*",
     "@element-plus-next/vue-context": "workspace:*",
+    "@element-plus-next/vue-utils": "workspace:*",
     "@floating-ui/dom": "^1.0.1",
     "@vueuse/core": "^9.1.1",
     "lodash": "^4.17.21",

@@ -17,27 +17,36 @@
 import { computed, inject, onMounted, provide, ref, unref, watch } from 'vue'
 import { offset } from '@floating-ui/dom'
 import {
-  tooltipV2ContentKey,
-  tooltipV2RootKey,
-} from '@element-plus-next/vue-context'
-import {
   arrowMiddleware,
   useFloating,
   useNamespace,
   useZIndex,
 } from '@element-plus-next/vue-hooks'
 import ElVisuallyHidden from '../../visual-hidden'
+import {
+  tooltipV2CommonProps,
+  tooltipV2ContentKey,
+  tooltipV2RootKey,
+} from './common'
 import { tooltipV2ContentProps } from './content'
-import { tooltipV2CommonProps } from './common'
 
 import type { CSSProperties } from 'vue'
+// eslint-disable-next-line import/no-duplicates
 import type { Middleware } from '@floating-ui/dom'
+
+// DO NOT REMOVE
+// @ts-expect-error fix TS2742 https://github.com/microsoft/TypeScript/issues/42873#issuecomment-1193972441
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, import/no-duplicates
+import type { Placement, Strategy, VirtualElement } from '@floating-ui/dom'
 
 defineOptions({
   name: 'ElTooltipV2Content',
 })
 
-const props = defineProps({ ...tooltipV2ContentProps, ...tooltipV2CommonProps })
+const props = defineProps({
+  ...tooltipV2ContentProps,
+  ...tooltipV2CommonProps,
+})
 
 const { triggerRef, contentId } = inject(tooltipV2RootKey)!
 
