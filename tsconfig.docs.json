@@ -1,0 +1,8 @@
+{
+  "extends": "@element-plus-next/tsconfig/tsconfig.docs.json",
+  "include": ["docs", "docs/.vitepress"],
+  "exclude": [],
+  "compilerOptions": {
+    "composite": true
+  }
+}

@@ -40,7 +40,8 @@
   },
   "dependencies": {
     "@element-plus-next/constants": "workspace:*",
-    "@element-plus-next/vue-components": "workspace:*"
+    "@element-plus-next/vue-components": "workspace:*",
+    "@element-plus-next/vue-context": "workspace:*"
   },
   "devDependencies": {
     "vue": "^3.2.31"

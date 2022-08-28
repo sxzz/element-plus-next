@@ -1,5 +1,0 @@
-{
-  "extends": "@element-plus-next/tsconfig/tsconfig.docs.json",
-  "include": ["**/*", ".vitepress/**/*"],
-  "exclude": []
-}
