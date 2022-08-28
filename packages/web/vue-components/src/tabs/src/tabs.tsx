@@ -101,9 +101,6 @@ export default defineComponent({
         if (canLeave !== false) {
           changeCurrentName(value)
 
-          // call exposed function, Vue doesn't support expose in typescript yet.
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-expect-error
           nav$.value?.removeFocus?.()
         }
       } catch {}
@@ -155,9 +152,6 @@ export default defineComponent({
 
     watch(currentName, async () => {
       await nextTick()
-      // call exposed function, Vue doesn't support expose in typescript yet.
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
       nav$.value?.scrollToActiveTab()
     })
 

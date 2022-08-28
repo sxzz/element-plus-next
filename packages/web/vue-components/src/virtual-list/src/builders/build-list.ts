@@ -11,8 +11,7 @@ import {
   resolveDynamicComponent,
   unref,
 } from 'vue'
-import { isClient } from '@vueuse/core'
-import { hasOwn, isNumber, isString } from '@element-plus-next/utils'
+import { hasOwn, isClient, isNumber, isString } from '@element-plus-next/utils'
 import { useNamespace } from '@element-plus-next/vue-hooks'
 import { useCache } from '../hooks/use-cache'
 import useWheel from '../hooks/use-wheel'
