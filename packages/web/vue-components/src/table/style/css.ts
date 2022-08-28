@@ -1,0 +1,6 @@
+import '../../base/style/css'
+import '@element-plus/theme-chalk/el-table.css'
+import '../../checkbox/style/css'
+import '../../tag/style/css'
+import '../../tooltip/style/css'
+import '../../scrollbar/style/css'

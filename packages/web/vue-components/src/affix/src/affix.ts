@@ -1,6 +1,6 @@
-import { CHANGE_EVENT } from '@element-plus-next/constants'
 import { isBoolean, isNumber } from '@element-plus-next/utils'
 import { buildProps, definePropType } from '@element-plus-next/vue-utils'
+import { CHANGE_EVENT } from '@element-plus-next/constants'
 import type { ExtractPropTypes } from 'vue'
 import type { ZIndexProperty } from 'csstype'
 import type Affix from './affix.vue'

@@ -1,0 +1,8 @@
+import '../../base/style'
+import '../../input/style'
+import '../../tag/style'
+import '../../option/style'
+import '../../option-group/style'
+import '../../scrollbar/style'
+import '../../popper/style'
+import '@element-plus/theme-chalk/src/select.scss'

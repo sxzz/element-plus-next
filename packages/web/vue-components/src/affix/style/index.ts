@@ -1,2 +1,2 @@
-import '@element-plus-next/components/base/style'
-import '@element-plus-next/theme-chalk/src/affix.scss'
+import '../../base/style'
+import '@element-plus/theme-chalk/src/affix.scss'

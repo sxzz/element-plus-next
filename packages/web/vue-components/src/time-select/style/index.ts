@@ -1,0 +1,7 @@
+import '../../base/style'
+import '@element-plus/theme-chalk/src/time-select.scss'
+import '../../scrollbar/style'
+import '../../popper/style'
+import '../../input/style'
+import '../../select/style'
+import '../../option/style'
